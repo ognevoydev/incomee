@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">incomee</string>
+
+    <string name="balance">Баланс</string>
+    <string name="last_operation">Последние операции</string>
+
+    <string name="analytics">Аналитика</string>
+    <string name="operations">Операции</string>
+    <string name="cards">Счета</string>
+    <string name="budget">Бюджет</string>
+    <string name="balance_default">0</string>
+    <string name="rub">₽</string>
+    <string name="add_operation">Добавить операцию</string>
 </resources>

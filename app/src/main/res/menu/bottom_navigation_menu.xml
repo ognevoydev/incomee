@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/analytics_tab"
+        android:enabled="false"
+        app:showAsAction="always"
+        android:icon="@drawable/analytics_ic"
+        android:title="@string/analytics"/>
+    <item
+        android:id="@+id/operations_tab"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/operations_ic"
+        android:title="@string/operations"/>
+    <item
+        android:id="@+id/cards_tab"
+        android:enabled="false"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/cards_ic"
+        android:title="@string/cards"/>
+
+    <item
+        android:id="@+id/budget_tab"
+        android:enabled="false"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/budget_ic"
+        android:title="@string/budget"/>
+</menu>
