@@ -8,4 +8,9 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:statusBarColor">@color/white</item>
     </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
 </resources>
