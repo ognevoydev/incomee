@@ -80,6 +80,14 @@
         app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
         app:layout_constraintTop_toBottomOf="@+id/balanceTextView" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filtersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/def"
+        android:layout_marginTop="@dimen/filters_to_last_operations_title"
+        app:layout_constraintTop_toBottomOf="@id/lastOperationsTitleTextView"/>
+
     <TextView
         android:id="@+id/emptyOperationListTextView"
         android:layout_width="wrap_content"

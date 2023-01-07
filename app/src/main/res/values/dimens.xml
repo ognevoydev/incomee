@@ -4,8 +4,10 @@
     <!-- dp -->
 
     <dimen name="def">16dp</dimen>
-    <dimen name="fab_to_bottom_bar">68dp</dimen>
     <dimen name="icon_size">24dp</dimen>
+
+    <dimen name="fab_to_bottom_bar">68dp</dimen>
+    <dimen name="filters_to_last_operations_title">12dp</dimen>
 
     <!-- sp -->
 
