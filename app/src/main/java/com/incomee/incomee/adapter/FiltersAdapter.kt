@@ -13,7 +13,7 @@ internal class FiltersAdapter() :
     private val itemsList = arrayOf("Тип операции", "Счет", "Период")
 
     internal inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var itemButton: Button = view.findViewById(R.id.itemButton)
+        var itemButton: Button = view.findViewById(R.id.filterButton)
 
         init {
             view.setOnClickListener {
@@ -24,7 +24,8 @@ internal class FiltersAdapter() :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
+        val itemView = LayoutInflater.from(parent.context)
+            .inflate(R.layout.button_filter, parent, false)
         return ViewHolder(itemView)
     }
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/def">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/def_x2"
+        android:text="@string/operation_type_title"
+        android:background="@drawable/filter_button"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="14sp"
+        android:drawableEnd="@drawable/chevron_down_ic"
+        android:drawablePadding="@dimen/half_def"
+        android:paddingHorizontal="@dimen/def"
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        >
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
