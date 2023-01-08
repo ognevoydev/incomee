@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="@dimen/def">
+    android:layout_marginHorizontal="@dimen/half_def">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/filterButton"
@@ -16,7 +16,7 @@
         android:textSize="14sp"
         android:drawableEnd="@drawable/chevron_down_ic"
         android:drawablePadding="@dimen/half_def"
-        android:paddingHorizontal="@dimen/def"
+        android:paddingHorizontal="@dimen/half_def"
         tools:ignore="MissingConstraints,RtlSymmetry"
         >
     </androidx.appcompat.widget.AppCompatButton>
