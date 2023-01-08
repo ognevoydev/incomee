@@ -10,13 +10,13 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/def_x2"
         android:text="@string/operation_type_title"
-        android:background="@drawable/filter_button"
+        android:background="@drawable/filter_button_ripple"
         android:textAllCaps="false"
         android:fontFamily="@font/roboto_regular"
         android:textSize="14sp"
         android:drawableEnd="@drawable/chevron_down_ic"
         android:drawablePadding="@dimen/half_def"
-        android:paddingHorizontal="@dimen/half_def"
+        android:paddingHorizontal="@dimen/def"
         tools:ignore="MissingConstraints,RtlSymmetry"
         >
     </androidx.appcompat.widget.AppCompatButton>
