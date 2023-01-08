@@ -21,4 +21,14 @@
     <string name="cards">Счета</string>
     <string name="budget">Бюджет</string>
     <string name="empty_operation_list_title">В истории операций пока пусто.\n Создайте первую операцию, и она \nпоявится здесь.</string>
+    <string name="income">Доход</string>
+    <string name="consumption">Расход</string>
+    <string name="transfer">Перевод</string>
+    <string name="account">Счет</string>
+    <string name="products">Продукты</string>
+    <string name="accountOperation">Счет</string>
+    <string name="card">Card</string>
+    <string name="date">Дата</string>
+    <string name="today">Сегодня</string>
+    <string name="save">Сохранить</string>
 </resources>
