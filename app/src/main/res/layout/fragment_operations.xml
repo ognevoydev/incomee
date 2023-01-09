@@ -53,7 +53,6 @@
         android:layout_height="@dimen/icon_size"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="@dimen/def"
-        android:contentDescription="@string/operation_search"
         android:src="@drawable/search_ic"
         app:layout_constraintEnd_toStartOf="@+id/moreImageView"
         app:layout_constraintTop_toTopOf="@+id/balanceTitleTextView" />
@@ -62,7 +61,6 @@
         android:id="@+id/moreImageView"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
-        android:contentDescription="@string/more"
         android:src="@drawable/more_ic"
         android:layout_marginEnd="@dimen/def"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +105,6 @@
         tools:targetApi="p"
         app:tint="@color/white"
         android:outlineSpotShadowColor="@android:color/transparent"
-        android:contentDescription="@string/add_operation"
         android:layout_marginHorizontal="@dimen/def"
         android:layout_marginBottom="@dimen/fab_to_bottom_bar"
         app:layout_constraintBottom_toBottomOf="parent"
