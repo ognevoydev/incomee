@@ -1,18 +1,16 @@
-package com.incomee.incomee.presentation
+package com.incomee.incomee.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import com.incomee.incomee.R
+import com.incomee.incomee.presentation.fragment.OperationsFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        Log.e("AAA", "Activity created")
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {

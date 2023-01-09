@@ -1,16 +1,15 @@
-package com.incomee.incomee.presentation
+package com.incomee.incomee.presentation.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.clearFragmentResult
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.incomee.incomee.R
+import com.incomee.incomee.presentation.viewmodel.OperationsViewModel
+import com.incomee.incomee.presentation.viewmodel.OperationsViewModelFactory
 
 class OperationsFragment : Fragment(R.layout.fragment_operations) {
 
@@ -32,8 +31,6 @@ class OperationsFragment : Fragment(R.layout.fragment_operations) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        Log.e("AAA", "Fragment created")
 
 //        vm.result.observe(this, Observer {
 //            someView.text = it
