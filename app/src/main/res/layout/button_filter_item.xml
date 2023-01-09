@@ -13,7 +13,7 @@
         android:background="@drawable/filter_button_ripple"
         android:textAllCaps="false"
         android:fontFamily="@font/roboto_regular"
-        android:textSize="14sp"
+        android:textSize="@dimen/text_def"
         android:drawableEnd="@drawable/chevron_down_ic"
         android:drawablePadding="@dimen/half_def"
         android:paddingHorizontal="@dimen/def"

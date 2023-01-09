@@ -11,6 +11,7 @@
 
     <style name="BottomNavigationViewTextStyle">
         <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_def</item>
     </style>
 
 </resources>

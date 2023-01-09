@@ -25,7 +25,7 @@ internal class FiltersAdapter() :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.button_filter, parent, false)
+            .inflate(R.layout.button_filter_item, parent, false)
         return ViewHolder(itemView)
     }
 
