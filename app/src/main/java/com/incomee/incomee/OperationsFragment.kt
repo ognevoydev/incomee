@@ -30,8 +30,6 @@ class OperationsFragment : Fragment(R.layout.fragment_operations) {
             adapter = filtersAdapter
             setLayoutManager(layoutManager)
         }
-
     }
-
 
 }

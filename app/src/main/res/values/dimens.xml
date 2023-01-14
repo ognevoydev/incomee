@@ -4,6 +4,7 @@
     <!-- dp -->
 
     <dimen name="half_def">8dp</dimen>
+    <dimen name="twelve">12dp</dimen>
     <dimen name="def">16dp</dimen>
     <dimen name="def_x2">32dp</dimen>
     <dimen name="icon_size">24dp</dimen>

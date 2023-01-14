@@ -27,7 +27,6 @@
         app:menu="@menu/bottom_navigation_menu"
         tools:targetApi="p"
         app:itemRippleColor="@null"
-
         app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
         app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
         app:itemIconTint="@color/bottom_nav_ic_color"
