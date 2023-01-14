@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">incomee</string>
 
+    <!-- Bottom navigation menu -->
+
+    <string name="analytics">Аналитика</string>
+    <string name="operations">Операции</string>
+    <string name="cards">Счета</string>
+    <string name="budget">Бюджет</string>
+
     <!-- OperationsFragment -->
 
     <string name="balance">Баланс</string>
@@ -13,13 +20,6 @@
     <string name="account">Счет</string>
     <string name="empty_operation_list_title">В истории операций пока пусто.\n Создайте первую операцию, и она \nпоявится здесь.</string>
 
-    <!-- Bottom navigation menu -->
-
-    <string name="analytics">Аналитика</string>
-    <string name="operations">Операции</string>
-    <string name="cards">Счета</string>
-    <string name="budget">Бюджет</string>
-
     <!-- New operation activity -->
 
     <string name="category">Категория</string>
@@ -28,4 +28,6 @@
     <string name="comment">Коментарий</string>
     <string name="save">Сохранить</string>
     <string name="repeat_operation">Повторять операцию</string>
+    <string name="operation_type_title">Тип операции</string>
+
 </resources>

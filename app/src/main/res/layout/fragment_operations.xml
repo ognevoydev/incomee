@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/balance"
         android:fontFamily="@font/roboto_regular"
-        android:textSize="@dimen/def_text"
+        android:textSize="@dimen/text_title"
         android:textColor="@color/gray"
         android:layout_margin="@dimen/def"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,11 +27,10 @@
         android:fontFamily="@font/roboto_bold"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="@dimen/def_text"
+        android:textSize="@dimen/text_title"
         android:layout_marginTop="3dp"
         app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
         app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView" />
-
 
     <TextView
         android:id="@+id/balanceCurrencyTextView"
@@ -42,7 +41,7 @@
         android:text="@string/rub"
         android:fontFamily="@font/roboto_bold"
         android:textColor="@color/black"
-        android:textSize="@dimen/def_text"
+        android:textSize="@dimen/text_title"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/balanceTextView"
         app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView" />
@@ -72,11 +71,22 @@
         android:layout_height="wrap_content"
         android:text="@string/last_operation"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_title"
+        android:textSize="@dimen/text_page_title"
         android:fontFamily="@font/roboto_bold"
         android:layout_marginTop="18dp"
         app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
         app:layout_constraintTop_toBottomOf="@+id/balanceTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filtersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/button_filter_item"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginStart="@dimen/half_def"
+        android:layout_marginTop="@dimen/filters_to_last_operations_title"
+        app:layout_constraintTop_toBottomOf="@id/lastOperationsTitleTextView"/>
 
     <TextView
         android:id="@+id/emptyOperationListTextView"
@@ -88,7 +98,7 @@
         android:text="@string/empty_operation_list_title"
         android:fontFamily="@font/roboto_regular"
         android:textColor="@color/black"
-        android:textSize="@dimen/def_text"
+        android:textSize="@dimen/text_def"
         app:layout_constraintBottom_toTopOf="@+id/AddOperationFab"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,6 +119,5 @@
         android:layout_marginBottom="@dimen/fab_to_bottom_bar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
