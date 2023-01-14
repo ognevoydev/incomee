@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:layout_margin="0dp">
+
+    <TextView
+        android:id="@+id/balanceTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/balance"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/text_title"
+        android:textColor="@color/gray"
+        android:layout_margin="@dimen/def"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/balance_default"
+        android:fontFamily="@font/roboto_bold"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_title"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView" />
+
+    <TextView
+        android:id="@+id/balanceCurrencyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/rub"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/balanceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView" />
+
+    <ImageView
+        android:id="@+id/searchImageView"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="@dimen/def"
+        android:contentDescription="@string/operation_search"
+        android:src="@drawable/search_ic"
+        app:layout_constraintEnd_toStartOf="@+id/moreImageView"
+        app:layout_constraintTop_toTopOf="@+id/balanceTitleTextView" />
+
+    <ImageView
+        android:id="@+id/moreImageView"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:contentDescription="@string/more"
+        android:src="@drawable/more_ic"
+        android:layout_marginEnd="@dimen/def"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchImageView" />
+
+    <TextView
+        android:id="@+id/lastOperationsTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_operation"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_page_title"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/balanceTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filtersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/button_filter_item"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginStart="@dimen/half_def"
+        android:layout_marginTop="@dimen/filters_to_last_operations_title"
+        app:layout_constraintTop_toBottomOf="@id/lastOperationsTitleTextView"/>
+
+    <TextView
+        android:id="@+id/emptyOperationListTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_round_corners"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="@string/empty_operation_list_title"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_def"
+        app:layout_constraintBottom_toTopOf="@+id/AddOperationFab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastOperationsTitleTextView"
+        app:layout_constraintVertical_bias="0.515" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/AddOperationFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/plus_ic"
+        android:backgroundTint="@color/def"
+        android:elevation="0dp"
+        tools:targetApi="p"
+        app:tint="@color/white"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:contentDescription="@string/add_operation"
+        android:layout_marginHorizontal="@dimen/def"
+        android:layout_marginBottom="@dimen/fab_to_bottom_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
