@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/back_ic"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="@dimen/def"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/income"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/consumption"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/consumption"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/consumption"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/transfer"
+        android:layout_width="95dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_background"
+        android:text="@string/transfer"
+        android:textAllCaps="false"
+        android:layout_marginStart="@dimen/def"
+        app:layout_constraintStart_toEndOf="@+id/consumption"
+        app:layout_constraintTop_toTopOf="@+id/consumption" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginTop="32dp"
+        android:numeric="integer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consumption"
+        tools:ignore="Deprecated" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rub"
+        android:textSize="21sp"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/editText"
+        android:textColor="@color/gray">
+    </TextView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bar_background"
+        android:layout_marginEnd="@dimen/def"
+        android:layout_marginStart="@dimen/def"
+        android:paddingEnd="@dimen/def"
+        android:paddingStart="@dimen/def"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/def"
+        android:layout_marginTop="@dimen/twelve"
+        android:text="@string/category"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/shopping_ic"
+        app:layout_constraintEnd_toStartOf="@+id/categoryButton"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/categoryButton"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="@drawable/empty_background"
+        android:text="Продукты"
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginEnd="@dimen/def"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@drawable/bar_background"
+        android:paddingStart="@dimen/def"
+        android:paddingEnd="@dimen/def"
+        android:layout_marginTop="@dimen/twelve"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/twelve"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/accountButton"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="@dimen/def"
+        android:background="@drawable/empty_background"
+        android:fontFamily="@font/roboto_regular"
+        android:stateListAnimator="@null"
+        android:text="Card"
+        android:textAllCaps="false"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/card_ic"
+        app:layout_constraintEnd_toStartOf="@+id/accountButton"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@drawable/bar_background"
+        android:paddingStart="@dimen/def"
+        android:paddingEnd="@dimen/def"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginTop="@dimen/twelve"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/twelve"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/calendar_ic"
+        app:layout_constraintEnd_toStartOf="@+id/dateButton"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/empty_background"
+        android:fontFamily="@font/roboto_regular"
+        android:stateListAnimator="@null"
+        android:text="Сегодня"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@drawable/bar_background"
+        android:paddingStart="@dimen/def"
+        android:paddingEnd="@dimen/def"
+        android:layout_marginTop="@dimen/twelve"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twelve"
+        android:background="@android:color/transparent"
+        android:hint="@string/comment"
+        android:textColorHint="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@drawable/bar_background"
+        android:paddingStart="@dimen/def"
+        android:paddingEnd="@dimen/def"
+        android:layout_marginTop="@dimen/twelve"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveButton"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:background="@drawable/blue_button"
+        android:text="@string/save"
+        android:fontFamily="@font/roboto_regular"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/def"
+        app:layout_constraintBottom_toTopOf="@id/repeatButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/repeatButton"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/gray_button"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/repeat_operation"
+        android:textAllCaps="false"
+        android:textColor="@color/def"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

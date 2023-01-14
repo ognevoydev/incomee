@@ -1,19 +1,6 @@
 <resources>
     <string name="app_name">incomee</string>
 
-    <!-- OperationsFragment -->
-
-    <string name="balance">Баланс</string>
-    <string name="last_operation">Последние операции</string>
-    <string name="balance_default">0</string>
-    <string name="rub">₽</string>
-
-    <!-- OperationsFragment Content description -->
-
-    <string name="add_operation">Добавить операцию</string>
-    <string name="more">Дополнительно</string>
-    <string name="operation_search">Поиск операций</string>
-
     <!-- Bottom navigation menu -->
 
     <string name="analytics">Аналитика</string>
@@ -21,4 +8,26 @@
     <string name="cards">Счета</string>
     <string name="budget">Бюджет</string>
     <string name="empty_operation_list_title">В истории операций пока пусто.\n Создайте первую операцию, и она \nпоявится здесь.</string>
+
+    <!-- OperationsFragment -->
+
+    <string name="balance">Баланс</string>
+    <string name="last_operation">Последние операции</string>
+    <string name="balance_default">0</string>
+    <string name="rub">₽</string>
+    <string name="income">Доход</string>
+    <string name="consumption">Расход</string>
+    <string name="transfer">Перевод</string>
+    <string name="account">Счет</string>
+
+    <!-- New operation activity -->
+
+    <string name="category">Категория</string>
+    <string name="card">Счет</string>
+    <string name="date">Дата</string>
+    <string name="comment">Коментарий</string>
+    <string name="save">Сохранить</string>
+    <string name="repeat_operation">Повторять операцию</string>
+    <string name="operation_type_title">Тип операции</string>
+
 </resources>
