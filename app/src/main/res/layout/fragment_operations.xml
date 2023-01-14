@@ -112,7 +112,6 @@
         android:src="@drawable/plus_ic"
         android:backgroundTint="@color/def"
         android:elevation="0dp"
-        tools:targetApi="p"
         app:tint="@color/white"
         android:outlineSpotShadowColor="@android:color/transparent"
         android:layout_marginHorizontal="@dimen/def"
