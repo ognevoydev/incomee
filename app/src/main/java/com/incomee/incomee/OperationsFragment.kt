@@ -1,4 +1,4 @@
-package com.incomee.incomee.view
+package com.incomee.incomee
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
-import com.incomee.incomee.R
 import com.incomee.incomee.adapter.FiltersAdapter
 import kotlinx.android.synthetic.main.fragment_operations.*
 
