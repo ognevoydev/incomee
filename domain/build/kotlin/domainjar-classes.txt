@@ -1,1 +1,0 @@
-C:\Users\User\Desktop\incomee\domain\build\classes\kotlin\main\com\incomee\incomee\domain\model\Operation.class;C:\Users\User\Desktop\incomee\domain\build\classes\kotlin\main\com\incomee\incomee\domain\repository\OperationRepository.class;C:\Users\User\Desktop\incomee\domain\build\classes\kotlin\main\com\incomee\incomee\domain\usecase\AddOperationUseCase.class
