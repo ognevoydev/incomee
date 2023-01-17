@@ -3,6 +3,7 @@ package com.incomee.incomee.presentation.viewmodel.factory
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.incomee.incomee.data.repository.OperationTypeFilterRepositoryImpl
 import com.incomee.incomee.data.repository.storage.OperationTypeFilterStorage
 import com.incomee.incomee.domain.usecase.GetOperationTypeFiltersUseCase
 import com.incomee.incomee.domain.usecase.UpdateOperationTypeFiltersUseCase
