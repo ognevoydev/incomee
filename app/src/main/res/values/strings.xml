@@ -16,7 +16,7 @@
     <string name="balance_default">0</string>
     <string name="rub">₽</string>
     <string name="income">Доход</string>
-    <string name="consumption">Расход</string>
+    <string name="expense">Расход</string>
     <string name="transfer">Перевод</string>
     <string name="account">Счет</string>
 
@@ -29,5 +29,12 @@
     <string name="save">Сохранить</string>
     <string name="repeat_operation">Повторять операцию</string>
     <string name="operation_type_title">Тип операции</string>
+    <string name="period">Период</string>
+
+    <!-- Bottom sheet DialogConstants -->
+
+    <string name="incomes">Доходы</string>
+    <string name="expenses">Расходы</string>
+    <string name="transfers">Переводы</string>
 
 </resources>
