@@ -1,7 +1,7 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="Theme.Incomee" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightStatusBar" >true</item>
 
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/black</item>
@@ -12,6 +12,14 @@
     <style name="BottomNavigationViewTextStyle">
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:textSize">@dimen/text_def</item>
+    </style>
+
+    <style name="BottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetDialogBackgroundStyle</item>
+    </style>
+
+    <style name="bottomSheetDialogBackgroundStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_dialog_bg</item>
     </style>
 
 </resources>
