@@ -99,7 +99,7 @@
                 android:layout_height="@dimen/def_x2"
                 android:layout_marginStart="@dimen/def"
                 android:background="@drawable/filter_button_ripple"
-                android:drawableEnd="@drawable/chevron_down_ic_black"
+                android:drawableEnd="@drawable/chevron_down_ic_selector"
                 android:drawablePadding="@dimen/half_def"
                 android:fontFamily="@font/roboto_regular"
                 android:paddingHorizontal="@dimen/def"
@@ -108,8 +108,7 @@
                 android:textAllCaps="false"
                 android:includeFontPadding="false"
                 android:textColor="@color/filter_color_selector"
-                android:textSize="@dimen/text_def"
-                tools:ignore="MissingConstraints,RtlSymmetry" />
+                android:textSize="@dimen/text_def"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/accountFilterButton"
@@ -117,7 +116,7 @@
                 android:layout_height="@dimen/def_x2"
                 android:layout_marginStart="@dimen/def"
                 android:background="@drawable/filter_button_ripple"
-                android:drawableEnd="@drawable/chevron_down_ic_black"
+                android:drawableEnd="@drawable/chevron_down_ic_selector"
                 android:drawablePadding="@dimen/half_def"
                 android:fontFamily="@font/roboto_regular"
                 android:paddingHorizontal="@dimen/def"
@@ -126,8 +125,7 @@
                 android:textAllCaps="false"
                 android:includeFontPadding="false"
                 android:textColor="@color/filter_color_selector"
-                android:textSize="@dimen/text_def"
-                tools:ignore="MissingConstraints,RtlSymmetry" />
+                android:textSize="@dimen/text_def"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/periodFilterButton"
@@ -136,7 +134,7 @@
                 android:layout_marginStart="@dimen/def"
                 android:layout_marginEnd="@dimen/def"
                 android:background="@drawable/filter_button_ripple"
-                android:drawableEnd="@drawable/chevron_down_ic_black"
+                android:drawableEnd="@drawable/chevron_down_ic_selector"
                 android:drawablePadding="@dimen/half_def"
                 android:fontFamily="@font/roboto_regular"
                 android:paddingHorizontal="@dimen/def"
@@ -145,8 +143,7 @@
                 android:textAllCaps="false"
                 android:includeFontPadding="false"
                 android:textColor="@color/filter_color_selector"
-                android:textSize="@dimen/text_def"
-                tools:ignore="MissingConstraints,RtlSymmetry" />
+                android:textSize="@dimen/text_def"/>
 
         </LinearLayout>
 

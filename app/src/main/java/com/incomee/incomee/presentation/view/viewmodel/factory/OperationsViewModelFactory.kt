@@ -1,4 +1,4 @@
-package com.incomee.incomee.presentation.viewmodel.factory
+package com.incomee.incomee.presentation.view.viewmodel.factory
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -8,7 +8,7 @@ import com.incomee.incomee.data.repository.storage.OperationTypeFilterStorage
 import com.incomee.incomee.domain.usecase.GetOperationTypeFiltersUseCase
 import com.incomee.incomee.domain.usecase.UpdateOperationTypeFiltersUseCase
 import com.incomee.incomee.presentation.constants.res.DialogRes
-import com.incomee.incomee.presentation.viewmodel.OperationsViewModel
+import com.incomee.incomee.presentation.view.viewmodel.OperationsViewModel
 
 class OperationsViewModelFactory(context: Context) : ViewModelProvider.Factory {
 
