@@ -9,23 +9,18 @@ import android.widget.LinearLayout
 import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.incomee.incomee.R
-import com.incomee.incomee.presentation.utils.Utils.changeVisibilityOf
+import com.incomee.incomee.domain.model.OperationTypeFilter.OperationType
+import com.incomee.incomee.presentation.utils.Views.changeVisibilityOf
 import com.incomee.incomee.presentation.viewmodel.OperationsViewModel
 import com.incomee.incomee.presentation.viewmodel.factory.OperationsViewModelFactory
-import com.incomee.incomee.domain.model.OperationTypeFilter.OperationType
 
 
-class OperationTypeDialog : BottomSheetDialogFragment(){
-
-    interface OnDialogCloseI {
-        fun onDialogClose()
-    }
+class OperationTypeDialog : DialogI() {
 
     var listener: OnDialogCloseI? = null
 
-    fun initOnDialogCloseI(listener: OnDialogCloseI) {
+    override fun initOnDialogCloseI(listener: OnDialogCloseI) {
         this.listener = listener
     }
 

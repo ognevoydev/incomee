@@ -1,9 +1,8 @@
 package com.incomee.incomee.presentation.utils
 
-import android.view.View
 import com.incomee.incomee.domain.model.OperationTypeFilter
 
-object Utils {
+object Extensions {
 
     fun List<OperationTypeFilter>.toComaString(): String {
         val sb = StringBuilder()
@@ -13,14 +12,5 @@ object Utils {
         }
         return sb.toString()
     }
-
-    fun changeVisibilityOf(view: View) {
-        if(view.visibility == View.VISIBLE) {
-            view.visibility = View.INVISIBLE
-        } else
-            view.visibility = View.VISIBLE
-    }
-
-
 
 }
