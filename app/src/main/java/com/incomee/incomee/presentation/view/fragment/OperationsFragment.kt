@@ -1,11 +1,11 @@
 package com.incomee.incomee.presentation.view.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.incomee.incomee.R
@@ -14,6 +14,7 @@ import com.incomee.incomee.domain.model.OperationTypeFilter
 import com.incomee.incomee.domain.model.OperationTypeFilter.OperationType
 import com.incomee.incomee.presentation.utils.Extensions.toComaString
 import com.incomee.incomee.presentation.utils.Views.showDialog
+import com.incomee.incomee.presentation.view.activity.NewOperationActivity
 import com.incomee.incomee.presentation.view.dialog.OnDialogCloseI
 import com.incomee.incomee.presentation.view.dialog.OperationTypeDialog
 import com.incomee.incomee.presentation.viewmodel.OperationsViewModel
@@ -46,6 +47,11 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
     }
 
     private fun initClickListeners() {
+        b.addOperationFab.setOnClickListener {
+            val intent = Intent(activity, NewOperationActivity::class.java)
+            startActivity(intent)
+        }
+
         b.operationTypeFilterButton.setOnClickListener {
             showDialog(OperationTypeDialog(), childFragmentManager, this)
         }

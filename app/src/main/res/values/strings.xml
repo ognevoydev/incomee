@@ -5,7 +5,7 @@
 
     <string name="analytics">Аналитика</string>
     <string name="operations">Операции</string>
-    <string name="cards">Счета</string>
+    <string name="accounts">Счета</string>
     <string name="budget">Бюджет</string>
     <string name="empty_operation_list_title">В истории операций пока пусто.\n Создайте первую операцию, и она \nпоявится здесь.</string>
 
