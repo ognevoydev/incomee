@@ -1,28 +1,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <item
-        android:id="@+id/analytics_tab"
-        android:enabled="false"
+        android:id="@+id/analyticsFragment"
+        android:enabled="true"
         app:showAsAction="always"
         android:icon="@drawable/analytics_ic"
-        android:title="@string/analytics"/>
+        android:title="@string/analytics"
+        tools:layout="@layout/fragment_analytics"/>
     <item
-        android:id="@+id/operations_tab"
+        android:id="@+id/operationsFragment"
         android:enabled="true"
         app:showAsAction="always"
         android:icon="@drawable/operations_ic"
-        android:title="@string/operations"/>
+        android:title="@string/operations"
+        tools:layout="@layout/fragment_operations"/>
     <item
-        android:id="@+id/cards_tab"
-        android:enabled="false"
+        android:id="@+id/accountsFragment"
+        android:enabled="true"
         app:showAsAction="ifRoom"
         android:icon="@drawable/cards_ic"
-        android:title="@string/cards"/>
+        android:title="@string/accounts"
+        tools:layout="@layout/fragment_accounts"/>
 
     <item
-        android:id="@+id/budget_tab"
-        android:enabled="false"
+        android:id="@+id/budgetFragment"
+        android:enabled="true"
         app:showAsAction="ifRoom"
         android:icon="@drawable/budget_ic"
-        android:title="@string/budget"/>
+        android:title="@string/budget"
+        tools:layout="@layout/fragment_budget"/>
 </menu>
