@@ -5,11 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.incomee.incomee.R
+import com.incomee.incomee.databinding.OperationTypeDialogBinding
 import com.incomee.incomee.domain.model.OperationTypeFilter.OperationType
 import com.incomee.incomee.presentation.utils.Views.changeVisibilityOf
 import com.incomee.incomee.presentation.viewmodel.OperationsViewModel
@@ -17,6 +18,8 @@ import com.incomee.incomee.presentation.viewmodel.factory.OperationsViewModelFac
 
 
 class OperationTypeDialog : DialogI() {
+
+    private val b: OperationTypeDialogBinding by viewBinding()
 
     var listener: OnDialogCloseI? = null
 
@@ -33,42 +36,31 @@ class OperationTypeDialog : DialogI() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.bottom_sheet_dialog, container, false)
+        return inflater.inflate(R.layout.operation_type_dialog, container, false)
     }
 
     override fun onStart() {
         super.onStart()
 
         vm = ViewModelProvider(requireParentFragment(), OperationsViewModelFactory(requireContext()))
-            .get(OperationsViewModel::class.java)
+                .get(OperationsViewModel::class.java)
 
-        dialog?.let { it ->
-            val incomeLayout = it.findViewById<LinearLayout>(R.id.incomeLayout)
-            val expenseLayout = it.findViewById<LinearLayout>(R.id.expenseLayout)
-            val transferLayout = it.findViewById<LinearLayout>(R.id.transferLayout)
-            val incomeCheckIcon = it.findViewById<ImageView>(R.id.incomeCheckIcon)
-            val expenseCheckIcon = it.findViewById<ImageView>(R.id.expenseCheckIcon)
-            val transferCheckIcon = it.findViewById<ImageView>(R.id.transferCheckIcon)
-            val closeIcon = it.findViewById<LinearLayout>(R.id.closeIconLayout)
+        vm.operationTypeFilters.observe(context as LifecycleOwner) {}
 
-            vm.operationTypeFilters.observe(context as LifecycleOwner) {}
+        initCheckBoxes(b.incomeCheckIcon, b.expenseCheckIcon, b.transferCheckIcon)
 
-            initCheckBoxes(incomeCheckIcon, expenseCheckIcon, transferCheckIcon)
+        b.incomeLayout.setOnClickListener { changeVisibilityOf(b.incomeCheckIcon) }
+        b.expenseLayout.setOnClickListener { changeVisibilityOf(b.expenseCheckIcon) }
+        b.transferLayout.setOnClickListener { changeVisibilityOf(b.transferCheckIcon) }
 
-            incomeLayout.setOnClickListener { changeVisibilityOf(incomeCheckIcon) }
-            expenseLayout.setOnClickListener { changeVisibilityOf(expenseCheckIcon) }
-            transferLayout.setOnClickListener { changeVisibilityOf(transferCheckIcon) }
-
-            it.setOnCancelListener {
-                updateFilters(incomeCheckIcon, expenseCheckIcon, transferCheckIcon)
-            }
-
-            closeIcon.setOnClickListener {
-                updateFilters(incomeCheckIcon, expenseCheckIcon, transferCheckIcon)
-                dismiss()
-            }
+        dialog?.setOnCancelListener {
+            updateFilters(b.incomeCheckIcon, b.expenseCheckIcon, b.transferCheckIcon)
         }
 
+        b.closeIcon.setOnClickListener {
+            updateFilters(b.incomeCheckIcon, b.expenseCheckIcon, b.transferCheckIcon)
+            dismiss()
+        }
     }
 
     private fun initCheckBoxes(incomeCheckIcon: ImageView, expenseCheckIcon: ImageView, transferCheckIcon: ImageView) {
