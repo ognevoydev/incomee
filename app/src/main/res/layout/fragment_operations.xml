@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="0dp"
-    android:padding="0dp">
+    android:padding="0dp"
+    tools:context=".presentation.view.fragment.OperationsFragment">
 
     <TextView
         android:id="@+id/balanceTitleTextView"
