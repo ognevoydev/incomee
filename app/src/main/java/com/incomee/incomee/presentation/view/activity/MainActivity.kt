@@ -1,13 +1,10 @@
-package com.incomee.incomee.presentation.activity
+package com.incomee.incomee.presentation.view.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.add
-import androidx.fragment.app.commit
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.incomee.incomee.R
-import com.incomee.incomee.presentation.fragment.OperationsFragment
-import com.incomee.incomee.presentation.viewmodel.OperationsViewModel
+import com.incomee.incomee.presentation.view.fragment.OperationsFragment
 
 class MainActivity : AppCompatActivity() {
 

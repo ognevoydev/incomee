@@ -14,4 +14,12 @@
         <item name="android:textSize">@dimen/text_def</item>
     </style>
 
+    <style name="BottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetDialogBackgroundStyle</item>
+    </style>
+
+    <style name="bottomSheetDialogBackgroundStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_dialog_bg</item>
+    </style>
+
 </resources>

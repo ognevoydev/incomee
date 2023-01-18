@@ -31,4 +31,10 @@
     <string name="operation_type_title">Тип операции</string>
     <string name="period">Период</string>
 
+    <!-- Bottom sheet DialogConstants -->
+
+    <string name="incomes">Доходы</string>
+    <string name="expenses">Расходы</string>
+    <string name="transfers">Переводы</string>
+
 </resources>
