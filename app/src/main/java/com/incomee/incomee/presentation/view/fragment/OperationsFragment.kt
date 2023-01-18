@@ -27,23 +27,25 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val view = inflater.inflate(R.layout.fragment_operations, container, false)
 
         vm = ViewModelProvider(this, OperationsViewModelFactory(requireContext()))
             .get(OperationsViewModel::class.java)
 
-        return view
+        return inflater.inflate(R.layout.fragment_operations, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setUpFilters()
-
-        vm.operationTypeFilters.observe(viewLifecycleOwner, Observer {
+        vm.operationTypeFilters.observe(viewLifecycleOwner) {
             setUpOperationTypeFilterText(it)
-        })
+        }
 
+        setUpFilters()
+        initClickListeners()
+    }
+
+    private fun initClickListeners() {
         b.operationTypeFilterButton.setOnClickListener {
             showDialog(OperationTypeDialog(), childFragmentManager, this)
         }
