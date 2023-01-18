@@ -5,20 +5,12 @@ import com.incomee.incomee.domain.model.OperationTypeFilter
 
 object Extensions {
 
-    fun List<OperationTypeFilterEntity>.mapToDomain(): List<OperationTypeFilter> {
-        val domain = ArrayList<OperationTypeFilter>()
-        for(e in this) {
-            domain.add(OperationTypeFilter(name = e.name, type = e.type.mapToDomain()))
-        }
-        return domain
+    fun OperationTypeFilterEntity.mapToDomain() : OperationTypeFilter {
+        return OperationTypeFilter(this.name, this.type.mapToDomain())
     }
 
-    fun List<OperationTypeFilter>.mapToEntity(): List<OperationTypeFilterEntity> {
-        val entity = ArrayList<OperationTypeFilterEntity>()
-        for(e in this) {
-            entity.add(OperationTypeFilterEntity(name = e.name, type = e.type.mapToEntity()))
-        }
-        return entity
+    fun OperationTypeFilter.mapToEntity() : OperationTypeFilterEntity {
+        return OperationTypeFilterEntity(this.name, this.type.mapToEntity())
     }
 
     fun OperationTypeFilterEntity.OperationType.mapToDomain() : OperationTypeFilter.OperationType {
