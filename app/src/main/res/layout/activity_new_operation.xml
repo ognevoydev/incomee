@@ -36,7 +36,7 @@
         android:layout_height="30dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/roboto_regular"
-        android:text="@string/consumption"
+        android:text="@string/expense"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
