@@ -3,6 +3,7 @@
 
     <!-- dp -->
 
+    <dimen name="six">6dp</dimen>
     <dimen name="half_def">8dp</dimen>
     <dimen name="twelve">12dp</dimen>
     <dimen name="def">16dp</dimen>
@@ -11,6 +12,7 @@
 
     <dimen name="fab_to_bottom_bar">68dp</dimen>
     <dimen name="filters_to_last_operations_title">14dp</dimen>
+    <dimen name="close_ic_padding">4dp</dimen>
 
     <!-- sp -->
 
