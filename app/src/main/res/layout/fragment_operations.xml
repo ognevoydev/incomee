@@ -93,57 +93,96 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/operationTypeFilterButt"
+            <LinearLayout
+                android:id="@+id/operationTypeFilterButton"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/def_x2"
-                android:layout_marginStart="@dimen/def"
                 android:background="@drawable/filter_button_ripple"
-                android:drawableEnd="@drawable/chevron_down_ic_selector"
-                android:drawablePadding="@dimen/half_def"
-                android:fontFamily="@font/roboto_regular"
-                android:paddingHorizontal="@dimen/def"
-                android:stateListAnimator="@null"
-                android:text="@string/operation_type_title"
-                android:textAllCaps="false"
-                android:includeFontPadding="false"
-                android:textColor="@color/filter_color_selector"
-                android:textSize="@dimen/text_def"/>
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/def"
+                android:paddingVertical="@dimen/six"
+                android:paddingHorizontal="@dimen/def">
 
-            <androidx.appcompat.widget.AppCompatButton
+                <TextView
+                    android:id="@+id/operationTypeFilterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/operation_type_title"
+                    android:textColor="@color/filter_color_selector"
+                    android:textSize="@dimen/text_def"
+                    android:fontFamily="@font/roboto_regular"/>
+
+                <ImageView
+                    android:id="@+id/operationTypeFilterIcon"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/chevron_down_ic_selector"
+                    android:layout_marginStart="@dimen/six"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/accountFilterButton"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/def_x2"
-                android:layout_marginStart="@dimen/def"
                 android:background="@drawable/filter_button_ripple"
-                android:drawableEnd="@drawable/chevron_down_ic_selector"
-                android:drawablePadding="@dimen/half_def"
-                android:fontFamily="@font/roboto_regular"
-                android:paddingHorizontal="@dimen/def"
-                android:stateListAnimator="@null"
-                android:text="@string/account"
-                android:textAllCaps="false"
-                android:includeFontPadding="false"
-                android:textColor="@color/filter_color_selector"
-                android:textSize="@dimen/text_def"/>
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/def"
+                android:paddingVertical="@dimen/six"
+                android:paddingHorizontal="@dimen/def">
 
-            <androidx.appcompat.widget.AppCompatButton
+                <TextView
+                    android:id="@+id/accountFilterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/account"
+                    android:textColor="@color/filter_color_selector"
+                    android:textSize="@dimen/text_def"
+                    android:fontFamily="@font/roboto_regular"/>
+
+                <ImageView
+                    android:id="@+id/accountFilterIcon"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/chevron_down_ic_selector"
+                    android:layout_marginStart="@dimen/six"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/periodFilterButton"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/def_x2"
+                android:background="@drawable/filter_button_ripple"
+                android:orientation="horizontal"
+                android:gravity="center"
                 android:layout_marginStart="@dimen/def"
                 android:layout_marginEnd="@dimen/def"
-                android:background="@drawable/filter_button_ripple"
-                android:drawableEnd="@drawable/chevron_down_ic_selector"
-                android:drawablePadding="@dimen/half_def"
-                android:fontFamily="@font/roboto_regular"
-                android:paddingHorizontal="@dimen/def"
-                android:stateListAnimator="@null"
-                android:text="@string/period"
-                android:textAllCaps="false"
-                android:includeFontPadding="false"
-                android:textColor="@color/filter_color_selector"
-                android:textSize="@dimen/text_def"/>
+                android:paddingVertical="@dimen/six"
+                android:paddingHorizontal="@dimen/def">
+
+                <TextView
+                    android:id="@+id/periodFilterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/period"
+                    android:textColor="@color/filter_color_selector"
+                    android:textSize="@dimen/text_def"
+                    android:fontFamily="@font/roboto_regular"/>
+
+                <ImageView
+                    android:id="@+id/periodFilterIcon"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/chevron_down_ic_selector"
+                    android:layout_marginStart="@dimen/six"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 

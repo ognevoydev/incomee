@@ -18,7 +18,7 @@ class OperationsViewModel(
     private val _operationTypeFilters = MutableLiveData<List<OperationTypeFilter>>()
     val operationTypeFilters: LiveData<List<OperationTypeFilter>> = _operationTypeFilters
 
-    fun updateOperationTypeFilters(isIncomeChecked: Boolean, isExpenseChecked: Boolean, isTransferChecked: Boolean) {
+    fun updateOperationTypeFilters(isIncomeChecked: Boolean = true, isExpenseChecked: Boolean = true, isTransferChecked: Boolean = true) {
         val filters = hashMapOf(
             OperationTypeFilter(res.income, OperationType.INCOME) to isIncomeChecked,
             OperationTypeFilter(res.expense, OperationType.EXPENSE) to isExpenseChecked,
