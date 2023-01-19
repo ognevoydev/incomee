@@ -48,8 +48,8 @@ class OperationTypeDialog : DialogI() {
 
         vm.operationTypeFilters.observe(context as LifecycleOwner) {}
 
-        initCheckBoxes()
         initClickListeners()
+        initCheckBoxes()
     }
 
     private fun initClickListeners() {
@@ -68,8 +68,6 @@ class OperationTypeDialog : DialogI() {
     }
 
     private fun initCheckBoxes() {
-        vm.getOperationTypeFilters()
-
         if (!vm.operationTypeFilters.value.isNullOrEmpty()) {
             for (filter in vm.operationTypeFilters.value!!) {
                 if (filter.type == OperationType.INCOME) changeVisibilityOf(b.incomeCheckIcon)

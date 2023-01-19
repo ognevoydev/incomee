@@ -38,11 +38,11 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
         super.onViewCreated(view, savedInstanceState)
 
         vm.operationTypeFilters.observe(viewLifecycleOwner) {
-            setUpOperationTypeFilterText(it)
+            setUpOperationTypeFilter()
         }
 
-        setUpFilters()
         initClickListeners()
+        setUpFilters()
     }
 
     private fun initClickListeners() {
@@ -51,15 +51,9 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
         }
 
         b.operationTypeFilterIcon.setOnClickListener {
-            operationTypeFilterIconOnClick()
+            if (b.operationTypeFilterButton.isActivated) vm.updateOperationTypeFilters()
+            else showDialog(OperationTypeDialog(), childFragmentManager, this)
         }
-    }
-
-    private fun operationTypeFilterIconOnClick() {
-        if (b.operationTypeFilterButton.isActivated) {
-            vm.updateOperationTypeFilters()
-            setUpOperationTypeFilter()
-        } else showDialog(OperationTypeDialog(), childFragmentManager, this)
     }
 
     override fun onDialogClose() {
@@ -71,8 +65,8 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
     }
 
     private fun setUpOperationTypeFilter() {
-        vm.getOperationTypeFilters()
         setUpOperationTypeFilterActivation()
+        setUpOperationTypeFilterText()
     }
 
     private fun setUpOperationTypeFilterActivation() {
@@ -80,10 +74,10 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
             vm.operationTypeFilters.value?.size != OperationType.values().size
     }
 
-    private fun setUpOperationTypeFilterText(it: List<OperationTypeFilter>) {
+    private fun setUpOperationTypeFilterText() {
         if (vm.operationTypeFilters.value?.size == OperationType.values().size) {
             b.operationTypeFilterTextView.text = getString(R.string.operation_type_title)
-        } else b.operationTypeFilterTextView.text = it.toComaString()
+        } else b.operationTypeFilterTextView.text = vm.operationTypeFilters.value?.toComaString()
     }
 
 }
