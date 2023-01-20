@@ -215,7 +215,7 @@
         android:backgroundTint="@color/def"
         android:elevation="0dp"
         android:outlineSpotShadowColor="@android:color/transparent"
-        android:src="@drawable/plus_ic"
+        android:src="@drawable/add_ic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white" />
