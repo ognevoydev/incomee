@@ -12,12 +12,12 @@
         android:id="@+id/backIcon"
         android:layout_width="42dp"
         android:layout_height="42dp"
+        android:src="@drawable/back_ic"
         android:layout_marginStart="2dp"
         android:layout_marginTop="22dp"
-        android:padding="@dimen/back_ic_padding"
-        android:src="@drawable/back_ic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/BackIconStyle" />
 
     <HorizontalScrollView
         android:id="@+id/operationTypeLayoutScrollView"
@@ -38,15 +38,14 @@
                 android:id="@+id/incomeButton"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/filter_button_height"
-                android:background="@drawable/filter_button_ripple"
-                style="@style/FilterButtonLayout">
+                style="@style/FilterButtonLayoutStyle">
 
                 <TextView
                     android:id="@+id/incomeTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/income"
-                    style="@style/FilterButtonText"/>
+                    style="@style/FilterButtonTextStyle"/>
 
             </LinearLayout>
 
@@ -55,15 +54,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/filter_button_height"
                 android:layout_marginStart="@dimen/filter_margin"
-                android:background="@drawable/filter_button_ripple"
-                style="@style/FilterButtonLayout">
+                style="@style/FilterButtonLayoutStyle">
 
                 <TextView
                     android:id="@+id/expenseTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/expense"
-                    style="@style/FilterButtonText"/>
+                    style="@style/FilterButtonTextStyle"/>
 
             </LinearLayout>
 
@@ -72,15 +70,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/filter_button_height"
                 android:layout_marginStart="@dimen/filter_margin"
-                android:background="@drawable/filter_button_ripple"
-                style="@style/FilterButtonLayout">
+                style="@style/FilterButtonLayoutStyle">
 
                 <TextView
                     android:id="@+id/transferTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/transfer"
-                    style="@style/FilterButtonText"/>
+                    style="@style/FilterButtonTextStyle"/>
 
             </LinearLayout>
 
