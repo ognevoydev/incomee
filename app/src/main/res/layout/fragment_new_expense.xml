@@ -20,7 +20,7 @@
         android:maxEms="5"
         android:hint="@string/amount_hint"
         android:textColorHint="@color/gray"
-        android:paddingHorizontal="@dimen/six"
+        android:paddingHorizontal="6dp"
         app:layout_constraintEnd_toStartOf="@+id/currencyTextView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -45,7 +45,7 @@
         android:id="@+id/categoryLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/twelve"
+        android:layout_marginTop="12dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/amountEditText">
@@ -55,14 +55,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:dividerColor="@color/bar"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             app:layout_constraintTop_toBottomOf="@id/amountEditText"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/new_operation_vertical_margin"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginVertical="@dimen/new_operation_divider_margin_vertical"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             android:orientation="horizontal">
 
             <TextView
@@ -83,7 +83,7 @@
                 android:id="@+id/categoryIcon"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
-                android:layout_marginEnd="@dimen/ten"
+                android:layout_marginEnd="@dimen/new_operation_icon_to_text"
                 android:src="@drawable/shopping_ic" />
 
             <TextView
@@ -101,7 +101,7 @@
             android:id="@+id/divider2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             app:dividerColor="@color/bar" />
 
     </LinearLayout>
@@ -117,8 +117,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/new_operation_vertical_margin"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginVertical="@dimen/new_operation_divider_margin_vertical"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             android:orientation="horizontal">
 
             <TextView
@@ -139,7 +139,7 @@
                 android:id="@+id/accountIcon"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
-                android:layout_marginEnd="@dimen/ten"
+                android:layout_marginEnd="@dimen/new_operation_icon_to_text"
                 android:src="@drawable/account_ic"/>
 
             <TextView
@@ -157,7 +157,7 @@
             android:id="@+id/divider3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             app:dividerColor="@color/bar" />
 
     </LinearLayout>
@@ -173,8 +173,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/new_operation_vertical_margin"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginVertical="@dimen/new_operation_divider_margin_vertical"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             android:orientation="horizontal">
 
             <TextView
@@ -195,7 +195,7 @@
                 android:id="@+id/dateIcon"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
-                android:layout_marginEnd="@dimen/ten"
+                android:layout_marginEnd="@dimen/new_operation_icon_to_text"
                 android:src="@drawable/date_ic" />
 
             <TextView
@@ -213,7 +213,7 @@
             android:id="@+id/divider4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             app:dividerColor="@color/bar" />
 
     </LinearLayout>
@@ -229,8 +229,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/new_operation_vertical_margin"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginVertical="@dimen/new_operation_divider_margin_vertical"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             android:orientation="horizontal">
 
             <EditText
@@ -252,7 +252,7 @@
             android:id="@+id/divider5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/def"
+            android:layout_marginHorizontal="@dimen/to_parent_default"
             app:dividerColor="@color/bar" />
 
     </LinearLayout>
@@ -269,8 +269,8 @@
         android:textSize="@dimen/text_title"
         android:fontFamily="@font/roboto_medium"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_marginHorizontal="@dimen/def"
-        android:layout_marginBottom="@dimen/def"
+        android:layout_marginHorizontal="@dimen/to_parent_default"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@id/repeatOperationButton"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -285,8 +285,8 @@
         android:textSize="@dimen/text_title"
         android:fontFamily="@font/roboto_medium"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_marginHorizontal="@dimen/def"
-        android:layout_marginBottom="@dimen/repeat_operation_button_to_bottom"
+        android:layout_marginHorizontal="@dimen/to_parent_default"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
