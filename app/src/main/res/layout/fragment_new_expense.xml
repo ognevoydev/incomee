@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    tools:context=".presentation.view.fragment.NewExpenseFragment">
+
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_page_title"
+        android:inputType="number"
+        android:background="@null"
+        android:maxEms="5"
+        android:hint="@string/amount_hint"
+        android:textColorHint="@color/gray"
+        android:paddingHorizontal="@dimen/six"
+        app:layout_constraintEnd_toStartOf="@+id/currencyTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/currencyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="₽"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_page_title"
+        app:layout_constraintBottom_toBottomOf="@+id/amountEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/amountEditText"
+        app:layout_constraintTop_toTopOf="@+id/amountEditText" />
+
+    <LinearLayout
+        android:id="@+id/categoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twelve"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amountEditText">
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="@color/bar"
+            android:layout_marginHorizontal="@dimen/def"
+            app:layout_constraintTop_toBottomOf="@id/amountEditText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/new_operation_vertical_margin"
+            android:layout_marginHorizontal="@dimen/def"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/categoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/category"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_hint_new_operation"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/categoryIcon"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginEnd="@dimen/ten"
+                android:src="@drawable/shopping_ic" />
+
+            <TextView
+                android:id="@+id/categoryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Продукты"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_new_operation"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/def"
+            app:dividerColor="@color/bar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/new_operation_vertical_margin"
+            android:layout_marginHorizontal="@dimen/def"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/accountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/account"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_hint_new_operation"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/accountIcon"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginEnd="@dimen/ten"
+                android:src="@drawable/account_ic"/>
+
+            <TextView
+                android:id="@+id/accountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Card"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_new_operation"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/def"
+            app:dividerColor="@color/bar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/new_operation_vertical_margin"
+            android:layout_marginHorizontal="@dimen/def"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/date"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_hint_new_operation"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/dateIcon"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginEnd="@dimen/ten"
+                android:src="@drawable/date_ic" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Сегодня"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_new_operation"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/def"
+            app:dividerColor="@color/bar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/new_operation_vertical_margin"
+            android:layout_marginHorizontal="@dimen/def"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/commentEditText"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="@null"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="@string/comment"
+                android:singleLine="true"
+                android:maxLength="50"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/text_hint_new_operation" />
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/def"
+            app:dividerColor="@color/bar" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveOperationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/save_operation_button_bg"
+        android:elevation="0dp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_title"
+        android:fontFamily="@font/roboto_medium"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginHorizontal="@dimen/def"
+        android:layout_marginBottom="@dimen/def"
+        app:layout_constraintBottom_toTopOf="@id/repeatOperationButton"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/repeatOperationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/repeat_operation_button_bg"
+        android:elevation="0dp"
+        android:text="@string/repeat_operation"
+        android:textAllCaps="false"
+        android:textColor="@color/def"
+        android:textSize="@dimen/text_title"
+        android:fontFamily="@font/roboto_medium"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginHorizontal="@dimen/def"
+        android:layout_marginBottom="@dimen/repeat_operation_button_to_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
