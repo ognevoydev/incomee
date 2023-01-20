@@ -3,20 +3,26 @@
 
     <!-- dp -->
 
-    <dimen name="six">6dp</dimen>
-    <dimen name="half_def">8dp</dimen>
-    <dimen name="ten">10dp</dimen>
-    <dimen name="twelve">12dp</dimen>
-    <dimen name="def">16dp</dimen>
-    <dimen name="def_x2">32dp</dimen>
-    <dimen name="icon_size">24dp</dimen>
-    <dimen name="filter_button_height">32dp</dimen>
-    <dimen name="new_operation_vertical_margin">14dp</dimen>
+    <!-- Common -->
 
-    <dimen name="fab_to_bottom_bar">68dp</dimen>
-    <dimen name="filters_to_last_operations_title">14dp</dimen>
+    <dimen name="to_parent_default">16dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
     <dimen name="close_ic_padding">4dp</dimen>
-    <dimen name="repeat_operation_button_to_bottom">16dp</dimen>
+
+    <!-- New operation activity -->
+
+    <dimen name="back_ic_padding">6dp</dimen>
+    <dimen name="filters_to_back_ic">16dp</dimen>
+    <dimen name="new_operation_divider_margin_vertical">14dp</dimen>
+    <dimen name="new_operation_icon_to_text">10dp</dimen>
+
+    <!-- Filters -->
+
+    <dimen name="filter_button_height">32dp</dimen>
+    <dimen name="filter_button_padding_vertical">6dp</dimen>
+    <dimen name="filter_button_padding_horizontal">16dp</dimen>
+    <dimen name="filter_button_icon_to_text">6dp</dimen>
+    <dimen name="filter_margin">16dp</dimen>
 
     <!-- sp -->
 

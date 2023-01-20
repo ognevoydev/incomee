@@ -12,7 +12,7 @@
         android:id="@+id/balanceTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/def"
+        android:layout_margin="@dimen/to_parent_default"
         android:fontFamily="@font/roboto_regular"
         android:text="@string/balance"
         android:textColor="@color/gray"
@@ -25,11 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
-        android:fontFamily="@font/roboto_bold"
         android:text="@string/balance_default"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_title"
-        android:textStyle="bold"
+        style="@style/BlackBoldTitle"
         app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
         app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView" />
 
@@ -39,11 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="3dp"
-        android:fontFamily="@font/roboto_bold"
         android:text="₽"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_title"
-        android:textStyle="bold"
+        style="@style/BlackBoldTitle"
         app:layout_constraintStart_toEndOf="@+id/balanceTextView"
         app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView" />
 
@@ -52,7 +46,7 @@
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="@dimen/def"
+        android:layout_marginEnd="@dimen/to_parent_default"
         android:src="@drawable/search_ic"
         app:layout_constraintEnd_toStartOf="@+id/moreImageView"
         app:layout_constraintTop_toTopOf="@+id/balanceTitleTextView" />
@@ -61,7 +55,7 @@
         android:id="@+id/moreImageView"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
-        android:layout_marginEnd="@dimen/def"
+        android:layout_marginEnd="@dimen/to_parent_default"
         android:src="@drawable/more_ic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/searchImageView" />
@@ -71,10 +65,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:fontFamily="@font/roboto_bold"
         android:text="@string/last_operation"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_page_title"
+        style="@style/BlackBoldPageTitle"
         app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
         app:layout_constraintTop_toBottomOf="@+id/balanceTextView" />
 
@@ -82,7 +74,7 @@
         android:id="@+id/filtersLayoutScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/filters_to_last_operations_title"
+        android:layout_marginTop="14dp"
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,91 +89,73 @@
             <LinearLayout
                 android:id="@+id/operationTypeFilterButton"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/def_x2"
+                android:layout_height="@dimen/filter_button_height"
                 android:background="@drawable/filter_button_ripple"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginStart="@dimen/def"
-                android:paddingVertical="@dimen/six"
-                android:paddingHorizontal="@dimen/def">
+                android:layout_marginStart="@dimen/to_parent_default"
+                style="@style/FilterButtonLayout">
 
                 <TextView
                     android:id="@+id/operationTypeFilterTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
                     android:text="@string/operation_type_title"
-                    android:textColor="@color/filter_color_selector"
-                    android:textSize="@dimen/text_def"
-                    android:fontFamily="@font/roboto_regular"/>
+                    style="@style/FilterButtonText"/>
 
                 <ImageView
                     android:id="@+id/operationTypeFilterIcon"
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:src="@drawable/chevron_down_ic_selector"
-                    android:layout_marginStart="@dimen/six"/>
+                    android:layout_marginStart="@dimen/filter_button_icon_to_text"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/accountFilterButton"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/def_x2"
+                android:layout_height="@dimen/filter_button_height"
                 android:background="@drawable/filter_button_ripple"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginStart="@dimen/def"
-                android:paddingVertical="@dimen/six"
-                android:paddingHorizontal="@dimen/def">
+                android:layout_marginStart="@dimen/to_parent_default"
+                style="@style/FilterButtonLayout">
 
                 <TextView
                     android:id="@+id/accountFilterTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
                     android:text="@string/account"
-                    android:textColor="@color/filter_color_selector"
-                    android:textSize="@dimen/text_def"
-                    android:fontFamily="@font/roboto_regular"/>
+                    style="@style/FilterButtonText"/>
 
                 <ImageView
                     android:id="@+id/accountFilterIcon"
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:src="@drawable/chevron_down_ic_selector"
-                    android:layout_marginStart="@dimen/six"/>
+                    android:layout_marginStart="@dimen/filter_button_icon_to_text"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/periodFilterButton"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/def_x2"
+                android:layout_height="@dimen/filter_button_height"
                 android:background="@drawable/filter_button_ripple"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginStart="@dimen/def"
-                android:layout_marginEnd="@dimen/def"
-                android:paddingVertical="@dimen/six"
-                android:paddingHorizontal="@dimen/def">
+                android:layout_marginStart="@dimen/to_parent_default"
+                android:layout_marginEnd="32dp"
+                style="@style/FilterButtonLayout">
 
                 <TextView
                     android:id="@+id/periodFilterTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:includeFontPadding="false"
                     android:text="@string/period"
-                    android:textColor="@color/filter_color_selector"
-                    android:textSize="@dimen/text_def"
-                    android:fontFamily="@font/roboto_regular"/>
+                    style="@style/FilterButtonText"/>
 
                 <ImageView
                     android:id="@+id/periodFilterIcon"
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:src="@drawable/chevron_down_ic_selector"
-                    android:layout_marginStart="@dimen/six"/>
+                    android:layout_marginStart="@dimen/filter_button_icon_to_text"/>
 
             </LinearLayout>
 
@@ -210,8 +184,8 @@
         android:id="@+id/addOperationFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/def"
-        android:layout_marginBottom="@dimen/fab_to_bottom_bar"
+        android:layout_marginHorizontal="@dimen/to_parent_default"
+        android:layout_marginBottom="68dp"
         android:backgroundTint="@color/def"
         android:elevation="0dp"
         android:outlineSpotShadowColor="@android:color/transparent"
