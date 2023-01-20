@@ -40,7 +40,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="3dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="@string/rub"
+        android:text="₽"
         android:textColor="@color/black"
         android:textSize="@dimen/text_title"
         android:textStyle="bold"
@@ -97,7 +97,7 @@
             <LinearLayout
                 android:id="@+id/operationTypeFilterButton"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/def_x2"
+                android:layout_height="@dimen/filter_button_height"
                 android:background="@drawable/filter_button_ripple"
                 android:orientation="horizontal"
                 android:gravity="center"
@@ -127,7 +127,7 @@
             <LinearLayout
                 android:id="@+id/accountFilterButton"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/def_x2"
+                android:layout_height="@dimen/filter_button_height"
                 android:background="@drawable/filter_button_ripple"
                 android:orientation="horizontal"
                 android:gravity="center"
@@ -157,7 +157,7 @@
             <LinearLayout
                 android:id="@+id/periodFilterButton"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/def_x2"
+                android:layout_height="@dimen/filter_button_height"
                 android:background="@drawable/filter_button_ripple"
                 android:orientation="horizontal"
                 android:gravity="center"

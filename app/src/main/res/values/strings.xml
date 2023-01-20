@@ -5,33 +5,34 @@
 
     <string name="analytics">Аналитика</string>
     <string name="operations">Операции</string>
-    <string name="accounts">Счета</string>
+    <string name="cards">Счета</string>
     <string name="budget">Бюджет</string>
     <string name="empty_operation_list_title">В истории операций пока пусто.\n Создайте первую операцию, и она \nпоявится здесь.</string>
 
-    <!-- OperationsFragment -->
+    <!-- Operations Fragment -->
 
     <string name="balance">Баланс</string>
     <string name="last_operation">Последние операции</string>
     <string name="balance_default">0</string>
-    <string name="rub">₽</string>
     <string name="income">Доход</string>
     <string name="expense">Расход</string>
     <string name="transfer">Перевод</string>
     <string name="account">Счет</string>
+    <string name="operation_type_title">Тип операции</string>
 
     <!-- New operation activity -->
 
+    <!-- New Expense Fragment -->
+
     <string name="category">Категория</string>
-    <string name="card">Счет</string>
     <string name="date">Дата</string>
-    <string name="comment">Коментарий</string>
+    <string name="comment">Комментарий</string>
     <string name="save">Сохранить</string>
     <string name="repeat_operation">Повторять операцию</string>
-    <string name="operation_type_title">Тип операции</string>
     <string name="period">Период</string>
+    <string name="amount_hint">0</string>
 
-    <!-- Bottom sheet DialogConstants -->
+    <!-- Bottom sheet Dialog -->
 
     <string name="incomes">Доходы</string>
     <string name="expenses">Расходы</string>
