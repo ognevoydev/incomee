@@ -12,7 +12,7 @@ import com.incomee.incomee.R
 import com.incomee.incomee.databinding.FragmentOperationsBinding
 import com.incomee.incomee.domain.model.OperationTypeFilter
 import com.incomee.incomee.domain.model.OperationTypeFilter.OperationType
-import com.incomee.incomee.presentation.utils.Extensions.toComaString
+import com.incomee.incomee.presentation.utils.Extensions.toFiltersString
 import com.incomee.incomee.presentation.utils.Views.showDialog
 import com.incomee.incomee.presentation.view.activity.NewOperationActivity
 import com.incomee.incomee.presentation.view.dialog.OnDialogCloseI
@@ -22,7 +22,7 @@ import com.incomee.incomee.presentation.viewmodel.factory.OperationsViewModelFac
 
 class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogCloseI {
 
-    private val b: FragmentOperationsBinding by viewBinding()
+    private val binding: FragmentOperationsBinding by viewBinding()
 
     private lateinit var vm: OperationsViewModel
 
@@ -47,23 +47,23 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
     }
 
     private fun initClickListeners() {
-        b.addOperationFab.setOnClickListener {
+        binding.addOperationFab.setOnClickListener {
             val intent = Intent(activity, NewOperationActivity::class.java)
             startActivity(intent)
         }
 
-        b.operationTypeFilterButton.setOnClickListener {
+        binding.operationTypeFilterButton.setOnClickListener {
             showDialog(OperationTypeDialog(), childFragmentManager, this)
         }
 
-        b.operationTypeFilterIcon.setOnClickListener {
+        binding.operationTypeFilterIcon.setOnClickListener {
             operationTypeFilterIconOnClick()
         }
     }
 
     private fun operationTypeFilterIconOnClick() {
-        if (b.operationTypeFilterButton.isActivated) {
-            vm.updateOperationTypeFilters()
+        if (binding.operationTypeFilterButton.isActivated) {
+            vm.clearOperationTypeFilters()
             setUpOperationTypeFilter()
         } else showDialog(OperationTypeDialog(), childFragmentManager, this)
     }
@@ -82,14 +82,14 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
     }
 
     private fun setUpOperationTypeFilterActivation() {
-        b.operationTypeFilterButton.isActivated =
+        binding.operationTypeFilterButton.isActivated =
             vm.operationTypeFilters.value?.size != OperationType.values().size
     }
 
     private fun setUpOperationTypeFilterText(it: List<OperationTypeFilter>) {
         if (vm.operationTypeFilters.value?.size == OperationType.values().size) {
-            b.operationTypeFilterTextView.text = getString(R.string.operation_type_title)
-        } else b.operationTypeFilterTextView.text = it.toComaString()
+            binding.operationTypeFilterTextView.text = getString(R.string.operation_type_title)
+        } else binding.operationTypeFilterTextView.text = it.toFiltersString()
     }
 
 }

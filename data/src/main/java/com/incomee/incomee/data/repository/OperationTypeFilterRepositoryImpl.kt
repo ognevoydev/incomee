@@ -1,6 +1,5 @@
 package com.incomee.incomee.data.repository
 
-import com.incomee.incomee.data.model.OperationTypeFilterEntity
 import com.incomee.incomee.data.repository.storage.FilterStorage
 import com.incomee.incomee.data.utils.Extensions.mapToDomain
 import com.incomee.incomee.data.utils.Extensions.mapToEntity
@@ -11,12 +10,16 @@ import kotlin.streams.toList
 class OperationTypeFilterRepositoryImpl (private val filterStorage: FilterStorage) :
     OperationTypeFilterRepository {
 
-    override fun save(filters: List<OperationTypeFilter>) {
-        filterStorage.save(filters.stream().map{ it.mapToEntity() }.toList())
+    override fun save(filter: OperationTypeFilter) {
+        filterStorage.save(filter.mapToEntity())
     }
 
-    override fun remove(filters: List<OperationTypeFilter>) {
-        filterStorage.remove(filters.stream().map{ it.mapToEntity() }.toList())
+    override fun remove(filter: OperationTypeFilter) {
+        filterStorage.remove(filter.mapToEntity())
+    }
+
+    override fun clear() {
+        filterStorage.clear()
     }
 
     override fun get(): List<OperationTypeFilter> {

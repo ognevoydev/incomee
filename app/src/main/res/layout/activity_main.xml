@@ -23,15 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_navigation_menu"
-        android:elevation="0dp"
         app:labelVisibilityMode="labeled"
         app:itemIconTint="@color/bottom_nav_ic_color"
         app:itemTextColor="@color/bottom_nav_text_color"
         app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
         app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
-        android:outlineAmbientShadowColor="@android:color/transparent"
-        android:outlineSpotShadowColor="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/BottomNavigationViewStyle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

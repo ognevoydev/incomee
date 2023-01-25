@@ -10,12 +10,20 @@ class OperationTypeFilterStorage(context: Context) : FilterStorage {
 
     private val sp = context.getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
 
-    override fun save(filters: List<OperationTypeFilterEntity>) {
-        filters.stream().forEach { sp.edit().putString(it.type.value, it.name).apply() }
+    override fun save(filter: OperationTypeFilterEntity) {
+        sp.edit().putString(filter.type.value, filter.name).apply()
     }
 
-    override fun remove(filters: List<OperationTypeFilterEntity>) {
-        filters.stream().forEach { sp.edit().remove(it.type.value).apply() }
+    override fun remove(filter: OperationTypeFilterEntity) {
+        sp.edit().remove(filter.type.value).apply()
+    }
+
+    override fun clear() {
+        for(filterType in OperationType.values()) {
+            val filterName = sp.getString(filterType.value, "")
+            if(!filterName.isNullOrEmpty())
+                sp.edit().remove(filterType.value).apply()
+        }
     }
 
     override fun get(): List<OperationTypeFilterEntity> {
