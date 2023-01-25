@@ -12,7 +12,7 @@ import com.incomee.incomee.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val b: ActivityMainBinding by viewBinding()
+    private val binding: ActivityMainBinding by viewBinding()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +20,14 @@ class MainActivity : AppCompatActivity() {
 
         disableBottomBarTooltips()
         val navController = this.findNavController(R.id.fragment_container)
-        b.bottomNavigationBar.setupWithNavController(navController)
-        b.bottomNavigationBar.selectedItemId = (R.id.operationsFragment)
+        binding.bottomNavigationBar.setupWithNavController(navController)
+        binding.bottomNavigationBar.selectedItemId = (R.id.operationsFragment)
 
     }
 
     private fun disableBottomBarTooltips() {
-        b.bottomNavigationBar.menu.forEach {
-                b.bottomNavigationBar.findViewById<View>(it.itemId).setOnLongClickListener {
+        binding.bottomNavigationBar.menu.forEach {
+                binding.bottomNavigationBar.findViewById<View>(it.itemId).setOnLongClickListener {
                     true
                 }
             }

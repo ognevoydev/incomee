@@ -4,7 +4,7 @@ import com.incomee.incomee.domain.model.OperationTypeFilter
 
 object Extensions {
 
-    fun List<OperationTypeFilter>.toComaString(): String {
+    fun List<OperationTypeFilter>.toFiltersString(): String {
         val sb = StringBuilder()
         for(el in this) {
             sb.append(el.name)

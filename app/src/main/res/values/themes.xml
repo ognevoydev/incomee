@@ -10,57 +10,8 @@
         <item name="android:statusBarColor">@color/white</item>
     </style>
 
-    <!-- Bottom Sheet Dialog -->
-
-    <style name="BottomNavigationViewTextStyle">
-        <item name="android:fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">@dimen/text_def</item>
-    </style>
-
     <style name="BottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetDialogBackgroundStyle</item>
-    </style>
-
-    <style name="BottomSheetDialogBackgroundStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/bottom_sheet_dialog_bg</item>
-    </style>
-
-    <!-- TextView -->
-
-    <style name="BlackRegularTitle">
-        <item name="android:textSize">@dimen/text_title</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:fontFamily">@font/roboto_regular</item>
-    </style>
-
-    <style name="BlackBoldTitle">
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/text_title</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:fontFamily">@font/roboto_bold</item>
-    </style>
-
-    <style name="BlackBoldPageTitle">
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/text_page_title</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:fontFamily">@font/roboto_bold</item>
-    </style>
-
-    <style name="FilterButtonText">
-        <item name="android:textSize">@dimen/text_def</item>
-        <item name="android:textColor">@color/filter_color_selector</item>
-        <item name="android:fontFamily">@font/roboto_regular</item>
-        <item name="android:includeFontPadding">false</item>
-    </style>
-
-    <!-- LinearLayout -->
-
-    <style name="FilterButtonLayout">
-        <item name="android:orientation">horizontal</item>
-        <item name="android:gravity">center</item>
-        <item name="android:paddingVertical">@dimen/filter_button_padding_vertical</item>
-        <item name="android:paddingHorizontal">@dimen/filter_button_padding_horizontal</item>
     </style>
 
 </resources>

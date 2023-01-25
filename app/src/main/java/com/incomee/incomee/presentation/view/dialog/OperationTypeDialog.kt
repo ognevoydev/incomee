@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
@@ -19,7 +18,7 @@ import com.incomee.incomee.presentation.viewmodel.factory.OperationsViewModelFac
 
 class OperationTypeDialog : DialogI() {
 
-    private val b: OperationTypeDialogBinding by viewBinding()
+    private val binding: OperationTypeDialogBinding by viewBinding()
 
     var listener: OnDialogCloseI? = null
 
@@ -53,15 +52,15 @@ class OperationTypeDialog : DialogI() {
     }
 
     private fun initClickListeners() {
-        b.incomeLayout.setOnClickListener { changeVisibilityOf(b.incomeCheckIcon) }
-        b.expenseLayout.setOnClickListener { changeVisibilityOf(b.expenseCheckIcon) }
-        b.transferLayout.setOnClickListener { changeVisibilityOf(b.transferCheckIcon) }
+        binding.incomeLayout.setOnClickListener { changeVisibilityOf(binding.incomeCheckIcon) }
+        binding.expenseLayout.setOnClickListener { changeVisibilityOf(binding.expenseCheckIcon) }
+        binding.transferLayout.setOnClickListener { changeVisibilityOf(binding.transferCheckIcon) }
 
         dialog?.setOnCancelListener {
             updateFilters()
         }
 
-        b.closeIcon.setOnClickListener {
+        binding.closeIcon.setOnClickListener {
             updateFilters()
             dismiss()
         }
@@ -70,19 +69,19 @@ class OperationTypeDialog : DialogI() {
     private fun initCheckBoxes() {
         vm.getOperationTypeFilters()
 
-        if (!vm.operationTypeFilters.value.isNullOrEmpty()) {
-            for (filter in vm.operationTypeFilters.value!!) {
-                if (filter.type == OperationType.INCOME) changeVisibilityOf(b.incomeCheckIcon)
-                if (filter.type == OperationType.EXPENSE) changeVisibilityOf(b.expenseCheckIcon)
-                if (filter.type == OperationType.TRANSFER) changeVisibilityOf(b.transferCheckIcon)
-            }
-        }
+        if(vm.operationTypeFilters.value!!.stream().anyMatch{ it.type == OperationType.INCOME })
+            changeVisibilityOf(binding.incomeCheckIcon)
+        if(vm.operationTypeFilters.value!!.stream().anyMatch{ it.type == OperationType.EXPENSE })
+            changeVisibilityOf(binding.expenseCheckIcon)
+        if(vm.operationTypeFilters.value!!.stream().anyMatch{ it.type == OperationType.TRANSFER })
+            changeVisibilityOf(binding.transferCheckIcon)
+
     }
 
     private fun updateFilters() {
-        vm.updateOperationTypeFilters(
-            b.incomeCheckIcon.isVisible, b.expenseCheckIcon.isVisible, b.transferCheckIcon.isVisible
-        )
+        vm.updateOperationTypeIncomeFilter(binding.incomeCheckIcon.isVisible)
+        vm.updateOperationTypeExpenseFilter(binding.expenseCheckIcon.isVisible)
+        vm.updateOperationTypeTransferFilter(binding.transferCheckIcon.isVisible)
         listener?.onDialogClose()
     }
 
