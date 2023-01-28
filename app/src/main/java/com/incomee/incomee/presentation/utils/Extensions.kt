@@ -1,16 +1,13 @@
 package com.incomee.incomee.presentation.utils
 
-import com.incomee.incomee.domain.model.OperationTypeFilter
+import android.content.Context
+import android.content.ContextWrapper
+import androidx.appcompat.app.AppCompatActivity
 
 object Extensions {
 
-    fun List<OperationTypeFilter>.toFiltersString(): String {
-        val sb = StringBuilder()
-        for(el in this) {
-            sb.append(el.name)
-            if(indexOf(el) != (this.size - 1)) sb.append(", ")
-        }
-        return sb.toString()
+    fun Context?.getLifeCycleOwner() : AppCompatActivity? = when (this) {
+        is ContextWrapper -> if (this is AppCompatActivity) this else this.baseContext.getLifeCycleOwner()
+        else -> null
     }
-
 }

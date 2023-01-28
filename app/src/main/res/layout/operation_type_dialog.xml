@@ -172,7 +172,7 @@
                 android:id="@+id/transferCheckIcon"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
-                android:layout_marginEnd="6dp"
+                android:layout_marginEnd="@dimen/to_parent_default"
                 android:src="@drawable/check_ic"
                 android:visibility="invisible" />
 
