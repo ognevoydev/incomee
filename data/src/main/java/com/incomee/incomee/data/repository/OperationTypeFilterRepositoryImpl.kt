@@ -7,7 +7,7 @@ import com.incomee.incomee.domain.model.OperationTypeFilter
 import com.incomee.incomee.domain.repository.OperationTypeFilterRepository
 import kotlin.streams.toList
 
-class OperationTypeFilterRepositoryImpl (private val filterStorage: FilterStorage) :
+class OperationTypeFilterRepositoryImpl(private val filterStorage: FilterStorage) :
     OperationTypeFilterRepository {
 
     override fun save(filter: OperationTypeFilter) {
