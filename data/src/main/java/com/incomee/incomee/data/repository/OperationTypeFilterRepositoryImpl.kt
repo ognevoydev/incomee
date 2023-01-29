@@ -10,12 +10,8 @@ import kotlin.streams.toList
 class OperationTypeFilterRepositoryImpl(private val filterStorage: FilterStorage) :
     OperationTypeFilterRepository {
 
-    override fun save(filter: OperationTypeFilter) {
-        filterStorage.save(filter.mapToEntity())
-    }
-
-    override fun remove(filter: OperationTypeFilter) {
-        filterStorage.remove(filter.mapToEntity())
+    override fun toggle(filter: OperationTypeFilter) {
+        filterStorage.toggle(filter.mapToEntity())
     }
 
     override fun clear() {

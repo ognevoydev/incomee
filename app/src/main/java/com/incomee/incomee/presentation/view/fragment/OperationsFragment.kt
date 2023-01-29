@@ -6,24 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.FragmentTransaction
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.incomee.incomee.R
 import com.incomee.incomee.databinding.FragmentOperationsBinding
-import com.incomee.incomee.domain.model.OperationTypeFilter
-import com.incomee.incomee.domain.model.OperationTypeFilter.OperationType
-import com.incomee.incomee.presentation.utils.Views.showDialog
 import com.incomee.incomee.presentation.view.activity.NewOperationActivity
-import com.incomee.incomee.presentation.view.dialog.OnDialogCloseI
-import com.incomee.incomee.presentation.view.dialog.OperationTypeDialog
-import com.incomee.incomee.presentation.viewmodel.OperationsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogCloseI {
+class OperationsFragment : Fragment(R.layout.fragment_operations) {
 
     private val binding: FragmentOperationsBinding by viewBinding()
-    private val vm: OperationsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -32,12 +25,9 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val transaction: FragmentTransaction = childFragmentManager.beginTransaction()
+        transaction.replace(R.id.filtersContainer, OperationFiltersFragment()).commit()
 
-        vm.operationTypeFilters.observe(viewLifecycleOwner) {
-            setUpOperationTypeFilterText(it)
-        }
-
-        setUpFilters()
         initClickListeners()
     }
 
@@ -46,45 +36,6 @@ class OperationsFragment : Fragment(R.layout.fragment_operations), OnDialogClose
             val intent = Intent(activity, NewOperationActivity::class.java)
             startActivity(intent)
         }
-
-        binding.operationTypeFilterButton.setOnClickListener {
-            showDialog(OperationTypeDialog(), childFragmentManager, this)
-        }
-
-        binding.operationTypeFilterIcon.setOnClickListener {
-            operationTypeFilterIconOnClick()
-        }
-    }
-
-    private fun operationTypeFilterIconOnClick() {
-        if (binding.operationTypeFilterButton.isActivated) {
-            vm.clearOperationTypeFilters()
-            setUpOperationTypeFilter()
-        } else showDialog(OperationTypeDialog(), childFragmentManager, this)
-    }
-
-    override fun onDialogClose() {
-        setUpFilters()
-    }
-
-    private fun setUpFilters() {
-        setUpOperationTypeFilter()
-    }
-
-    private fun setUpOperationTypeFilter() {
-        vm.getOperationTypeFilters()
-        setUpOperationTypeFilterActivation()
-    }
-
-    private fun setUpOperationTypeFilterActivation() {
-        binding.operationTypeFilterButton.isActivated =
-            vm.operationTypeFilters.value?.size != OperationType.values().size
-    }
-
-    private fun setUpOperationTypeFilterText(it: List<OperationTypeFilter>) {
-        if (vm.operationTypeFilters.value?.size == OperationType.values().size) {
-            binding.operationTypeFilterTextView.text = getString(R.string.operation_type_title)
-        } else binding.operationTypeFilterTextView.text = it.joinToString { it.name }
     }
 
 }

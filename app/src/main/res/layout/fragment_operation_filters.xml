@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    tools:context=".presentation.view.fragment.OperationFiltersFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/filtersLayoutScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/filtersLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/operationTypeFilterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filter_button_height"
+                android:layout_marginStart="@dimen/to_parent_default"
+                style="@style/FilterButtonLayoutStyle">
+
+                <TextView
+                    android:id="@+id/operationTypeFilterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/operation_type_title"
+                    style="@style/FilterButtonTextStyle"/>
+
+                <ImageView
+                    android:id="@+id/operationTypeFilterIcon"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/chevron_down_ic_selector"
+                    android:layout_marginStart="@dimen/filter_button_icon_to_text"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accountFilterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filter_button_height"
+                android:layout_marginStart="@dimen/to_parent_default"
+                style="@style/FilterButtonLayoutStyle">
+
+                <TextView
+                    android:id="@+id/accountFilterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account"
+                    style="@style/FilterButtonTextStyle"/>
+
+                <ImageView
+                    android:id="@+id/accountFilterIcon"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/chevron_down_ic_selector"
+                    android:layout_marginStart="@dimen/filter_button_icon_to_text"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/periodFilterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filter_button_height"
+                android:layout_marginStart="@dimen/to_parent_default"
+                android:layout_marginEnd="@dimen/to_parent_default"
+                style="@style/FilterButtonLayoutStyle">
+
+                <TextView
+                    android:id="@+id/periodFilterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/period"
+                    style="@style/FilterButtonTextStyle"/>
+
+                <ImageView
+                    android:id="@+id/periodFilterIcon"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/chevron_down_ic_selector"
+                    android:layout_marginStart="@dimen/filter_button_icon_to_text"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

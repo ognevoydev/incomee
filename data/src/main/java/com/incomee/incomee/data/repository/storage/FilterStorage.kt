@@ -4,8 +4,7 @@ import com.incomee.incomee.data.model.OperationTypeFilterEntity
 
 interface FilterStorage {
 
-    fun save(filter: OperationTypeFilterEntity)
-    fun remove(filter: OperationTypeFilterEntity)
+    fun toggle(filter: OperationTypeFilterEntity)
     fun clear()
     fun get(): List<OperationTypeFilterEntity>
 
