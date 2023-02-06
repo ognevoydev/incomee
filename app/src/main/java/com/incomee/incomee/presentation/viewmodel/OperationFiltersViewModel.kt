@@ -1,6 +1,7 @@
 package com.incomee.incomee.presentation.viewmodel
 
 import android.content.res.Resources
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,7 +23,7 @@ class OperationFiltersViewModel @Inject constructor(
 ) : ViewModel() {
 
     @Inject
-    @Named("OperationTypes")
+    @Named("OperationTypesList")
     lateinit var operationTypes: HashMap<String, OperationTypeFilter>
 
     private val _operationTypeFilters = MutableLiveData<List<OperationTypeFilter>>()

@@ -6,7 +6,7 @@
     <color name="gray">#8393A5</color>
     <color name="light_gray">#EEF0F4</color>
     <color name="dark_gray">#C9C7CB</color>
-    <color name="def">#3A86FF</color>
+    <color name="main">#3A86FF</color>
     <color name="bar">#DADADA</color>
     <color name="ripple_color_gray">#E4E4E4</color>
     <color name="button_gray">#F2F4F5</color>

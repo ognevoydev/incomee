@@ -11,8 +11,8 @@
 
     <!-- New operation activity -->
 
-    <dimen name="back_ic_padding">6dp</dimen>
-    <dimen name="filters_to_back_ic">16dp</dimen>
+    <dimen name="back_ic_padding">0dp</dimen>
+    <dimen name="filters_to_back_ic">22dp</dimen>
     <dimen name="new_operation_divider_margin_vertical">14dp</dimen>
     <dimen name="new_operation_icon_to_text">10dp</dimen>
 

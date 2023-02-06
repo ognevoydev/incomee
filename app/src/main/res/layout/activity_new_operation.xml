@@ -10,11 +10,11 @@
 
     <ImageView
         android:id="@+id/backIcon"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:src="@drawable/back_ic"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/BackIconStyle" />

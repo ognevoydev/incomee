@@ -38,4 +38,25 @@
     <string name="expenses">Расходы</string>
     <string name="transfers">Переводы</string>
 
+    <!-- Categories activity -->
+
+    <string name="categories">Категории</string>
+    <string name="category_products">Продукты</string>
+    <string name="category_car">Машина</string>
+    <string name="category_clothes">Одежда</string>
+    <string name="category_internet">Интернет</string>
+    <string name="category_cafe">Кафе</string>
+    <string name="category_education">Образование</string>
+    <string name="category_entertainment">Развлечения</string>
+    <string name="category_gifts">Подарки</string>
+    <string name="category_tech">Техника</string>
+    <string name="category_medicine">Аптека</string>
+    <string name="category_home">Дом</string>
+    <string name="category_children">Дети</string>
+    <string name="category_pets">Питомцы</string>
+    <string name="category_sport">Спорт</string>
+    <string name="category_transport">Транспорт</string>
+    <string name="category_travel">Путешествия</string>
+    <string name="category_empty">Без категории</string>
+
 </resources>

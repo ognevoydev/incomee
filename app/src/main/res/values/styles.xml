@@ -88,22 +88,30 @@
         <item name="android:gravity">center</item>
         <item name="android:paddingVertical">@dimen/filter_button_padding_vertical</item>
         <item name="android:paddingHorizontal">@dimen/filter_button_padding_horizontal</item>
+        <item name="android:clickable">true</item>
     </style>
 
     <style name="CloseIconLayoutStyle">
         <item name="android:padding">@dimen/close_ic_padding</item>
     </style>
 
+    <style name="RippleLayoutStyle">
+        <item name="android:background">@drawable/layout_bg</item>
+        <item name="android:clickable">true</item>
+    </style>
+
     <!-- ImageView -->
 
     <style name="BackIconStyle">
         <item name="android:padding">@dimen/back_ic_padding</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
     </style>
 
     <!-- FAB -->
 
     <style name="AddOperationFabStyle">
-        <item name="android:backgroundTint">@color/def</item>
+        <item name="android:backgroundTint">@color/main</item>
         <item name="android:elevation">0dp</item>
         <item name="android:outlineSpotShadowColor">@android:color/transparent</item>
     </style>
@@ -149,7 +157,7 @@
         <item name="android:background">@drawable/repeat_operation_button_bg</item>
         <item name="android:elevation">0dp</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:textColor">@color/def</item>
+        <item name="android:textColor">@color/main</item>
         <item name="android:textSize">@dimen/text_title</item>
         <item name="android:fontFamily">@font/roboto_medium</item>
         <item name="android:stateListAnimator">@null</item>

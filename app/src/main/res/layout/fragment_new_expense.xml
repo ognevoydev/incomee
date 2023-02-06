@@ -39,7 +39,8 @@
         android:layout_marginTop="12dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/amountEditText">
+        app:layout_constraintTop_toBottomOf="@id/amountEditText"
+        style="@style/RippleLayoutStyle">
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider1"
@@ -73,13 +74,13 @@
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
                 android:layout_marginEnd="@dimen/new_operation_icon_to_text"
-                android:src="@drawable/shopping_ic" />
+                android:src="@drawable/category_empty_ic" />
 
             <TextView
                 android:id="@+id/categoryTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="24dp"
-                android:text="Продукты"
+                android:text="@string/category_empty"
                 style="@style/NewOperationSelectedStyle" />
 
         </LinearLayout>
@@ -99,7 +100,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/categoryLayout">
+        app:layout_constraintTop_toBottomOf="@id/categoryLayout"
+        style="@style/RippleLayoutStyle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -151,7 +153,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/accountLayout">
+        app:layout_constraintTop_toBottomOf="@id/accountLayout"
+        style="@style/RippleLayoutStyle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -203,7 +206,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dateLayout">
+        app:layout_constraintTop_toBottomOf="@id/dateLayout"
+        style="@style/RippleLayoutStyle">
 
         <LinearLayout
             android:layout_width="match_parent"

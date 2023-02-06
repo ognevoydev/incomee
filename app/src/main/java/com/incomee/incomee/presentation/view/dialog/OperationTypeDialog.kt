@@ -19,7 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class OperationTypeDialog : DialogI() {
 
     private val binding: OperationTypeDialogBinding by viewBinding()
-    private val vm: OperationFiltersViewModel by viewModels()
+    private val vm: OperationFiltersViewModel by viewModels(ownerProducer = { requireParentFragment() })
 
     private var listener: OnDialogCloseI? = null
 
