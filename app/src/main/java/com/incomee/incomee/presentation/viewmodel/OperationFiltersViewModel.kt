@@ -12,23 +12,18 @@ import com.incomee.incomee.domain.usecase.ToggleOperationTypeFilterUseCase
 import com.incomee.incomee.domain.usecase.ClearOperationTypeFiltersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
+import javax.inject.Named
 
 @HiltViewModel
 class OperationFiltersViewModel @Inject constructor(
-    res: Resources,
     private val toggleOperationTypeFilterUseCase: ToggleOperationTypeFilterUseCase,
     private val clearOperationTypeFiltersUseCase: ClearOperationTypeFiltersUseCase,
     private val getOperationTypeFiltersUseCase: GetOperationTypeFiltersUseCase
 ) : ViewModel() {
 
-    val operationTypes = hashMapOf(
-        OperationType.INCOME.value to
-                OperationTypeFilter(res.getString(R.string.income), OperationType.INCOME),
-        OperationType.EXPENSE.value to
-                OperationTypeFilter(res.getString(R.string.expense), OperationType.EXPENSE),
-        OperationType.TRANSFER.value to
-                OperationTypeFilter(res.getString(R.string.transfer), OperationType.TRANSFER),
-    )
+    @Inject
+    @Named("OperationTypes")
+    lateinit var operationTypes: HashMap<String, OperationTypeFilter>
 
     private val _operationTypeFilters = MutableLiveData<List<OperationTypeFilter>>()
     val operationTypeFilters: LiveData<List<OperationTypeFilter>> = _operationTypeFilters
