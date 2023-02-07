@@ -7,14 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.incomee.incomee.R
+import com.incomee.incomee.databinding.CategoryItemBinding
 import com.incomee.incomee.domain.model.Category
 
 internal class CategoriesAdapter(private var items: List<Category>) :
     RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
     internal inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var title: TextView = view.findViewById(R.id.categoryTitle)
-        var icon: ImageView = view.findViewById(R.id.categoryIcon)
+        val binding = CategoryItemBinding.bind(view)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,8 +25,8 @@ internal class CategoriesAdapter(private var items: List<Category>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        holder.title.text = item.title;
-        holder.icon.setImageResource(item.image)
+        holder.binding.categoryTitle.text = item.title;
+        holder.binding.categoryIcon.setImageResource(item.image)
     }
 
     override fun getItemCount(): Int {

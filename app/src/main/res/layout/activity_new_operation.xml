@@ -8,16 +8,24 @@
     android:padding="0dp"
     tools:context=".presentation.view.activity.NewOperationActivity">
 
-    <ImageView
-        android:id="@+id/backIcon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/back_ic"
+    <LinearLayout
+        android:id="@+id/backIconLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/BackIconStyle" />
+        style="@style/BackIconLayoutStyle">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_ic"
+            style="@style/BackIconStyle" />
+
+    </LinearLayout>
 
     <HorizontalScrollView
         android:id="@+id/operationTypeLayoutScrollView"
@@ -25,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/filters_to_back_ic"
         android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/backIcon">
+        app:layout_constraintTop_toBottomOf="@id/backIconLayout">
 
         <LinearLayout
             android:id="@+id/operationTypeLayout"
@@ -89,6 +97,8 @@
         android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph_new_operation"
         tools:layout="@layout/fragment_new_expense"
         android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

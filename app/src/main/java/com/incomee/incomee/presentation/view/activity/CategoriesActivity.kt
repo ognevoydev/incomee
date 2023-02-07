@@ -32,7 +32,8 @@ class CategoriesActivity : AppCompatActivity() {
             adapter = CategoriesAdapter(categoriesList)
         }
 
-        binding.backIcon.setOnClickListener {
+        binding.backIconLayout.setOnClickListener {
+            binding.backIcon.performClick()
             finish()
         }
     }

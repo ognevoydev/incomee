@@ -42,6 +42,7 @@ class AppModule {
     @Named("CategoriesList")
     fun provideCategoriesList(res: Resources) : ArrayList<Category> {
         return arrayListOf(
+            Category(res.getString(R.string.category_empty), R.drawable.category_empty_ic),
             Category(res.getString(R.string.category_products), R.drawable.category_products_ic),
             Category(res.getString(R.string.category_car), R.drawable.category_car_ic),
             Category(res.getString(R.string.category_clothes), R.drawable.category_clothes_ic),
@@ -57,8 +58,7 @@ class AppModule {
             Category(res.getString(R.string.category_pets), R.drawable.category_pets_ic),
             Category(res.getString(R.string.category_sport), R.drawable.category_sport_ic),
             Category(res.getString(R.string.category_transport), R.drawable.category_transport_ic),
-            Category(res.getString(R.string.category_travel), R.drawable.category_travel_ic),
-            Category(res.getString(R.string.category_empty), R.drawable.category_empty_ic)
+            Category(res.getString(R.string.category_travel), R.drawable.category_travel_ic)
         )
     }
 

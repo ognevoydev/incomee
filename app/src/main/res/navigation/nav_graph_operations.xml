@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_operations"
+    app:startDestination="@id/operationFiltersFragment">
+
+    <fragment
+        android:id="@+id/operationFiltersFragment"
+        android:name="com.incomee.incomee.presentation.view.fragment.OperationFiltersFragment"
+        android:label="fragment_operation_filters"
+        tools:layout="@layout/fragment_operation_filters" />
+</navigation>

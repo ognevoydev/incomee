@@ -100,12 +100,16 @@
         <item name="android:clickable">true</item>
     </style>
 
+    <style name="BackIconLayoutStyle">
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
     <!-- ImageView -->
 
     <style name="BackIconStyle">
         <item name="android:padding">@dimen/back_ic_padding</item>
         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
-        <item name="android:clickable">true</item>
+        <item name="android:clickable">false</item>
     </style>
 
     <!-- FAB -->

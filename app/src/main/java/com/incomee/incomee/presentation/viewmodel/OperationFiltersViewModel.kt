@@ -1,16 +1,12 @@
 package com.incomee.incomee.presentation.viewmodel
 
-import android.content.res.Resources
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.incomee.incomee.R
 import com.incomee.incomee.domain.model.OperationTypeFilter
-import com.incomee.incomee.domain.model.OperationTypeFilter.OperationType
+import com.incomee.incomee.domain.usecase.ClearOperationTypeFiltersUseCase
 import com.incomee.incomee.domain.usecase.GetOperationTypeFiltersUseCase
 import com.incomee.incomee.domain.usecase.ToggleOperationTypeFilterUseCase
-import com.incomee.incomee.domain.usecase.ClearOperationTypeFiltersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import javax.inject.Named

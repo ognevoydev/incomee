@@ -18,16 +18,8 @@ class OperationsFragment : Fragment(R.layout.fragment_operations) {
 
     private val binding: FragmentOperationsBinding by viewBinding()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.fragment_operations, container, false)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val transaction: FragmentTransaction = childFragmentManager.beginTransaction()
-        transaction.replace(R.id.filtersContainer, OperationFiltersFragment()).commit()
-
         initClickListeners()
     }
 

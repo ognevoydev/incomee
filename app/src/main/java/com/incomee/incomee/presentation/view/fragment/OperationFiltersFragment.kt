@@ -26,11 +26,6 @@ class OperationFiltersFragment : Fragment(R.layout.fragment_operation_filters), 
     private val binding: FragmentOperationFiltersBinding by viewBinding()
     private val vm: OperationFiltersViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.fragment_operation_filters, container, false)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

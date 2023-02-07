@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_new_operation"
+    app:startDestination="@id/newExpenseFragment">
+
+    <fragment
+        android:id="@+id/newExpenseFragment"
+        android:name="com.incomee.incomee.presentation.view.fragment.NewExpenseFragment"
+        android:label="fragment_new_expense"
+        tools:layout="@layout/fragment_new_expense" />
+</navigation>

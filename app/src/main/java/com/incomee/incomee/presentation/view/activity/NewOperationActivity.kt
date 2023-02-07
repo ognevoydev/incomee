@@ -20,14 +20,10 @@ class NewOperationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_operation)
 
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .add<NewExpenseFragment>(R.id.fragment_container_view).commit()
-        }
-
         binding.expenseButton.isActivated = true
 
-        binding.backIcon.setOnClickListener {
+        binding.backIconLayout.setOnClickListener {
+            binding.backIcon.performClick()
             finish()
         }
     }
