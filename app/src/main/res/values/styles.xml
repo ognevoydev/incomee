@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Bottom Navigation View -->
+
+    <style name="BottomNavigationViewStyle">
+        <item name="android:elevation">0dp</item>
+        <item name="android:outlineAmbientShadowColor">@android:color/transparent</item>
+        <item name="android:outlineSpotShadowColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_def</item>
+    </style>
+
+    <style name="BottomSheetDialogBackgroundStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_dialog_bg</item>
+    </style>
+
+    <!-- TextView -->
+
+    <style name="BlackRegularTitleStyle">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="BlackBoldTitleStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="BlackBoldPageTitleStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_page_title</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="FilterButtonTextStyle">
+        <item name="android:textSize">@dimen/text_def</item>
+        <item name="android:textColor">@color/filter_color_selector</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="BalanceTitleStyle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="EmptyOperationListViewStyle">
+        <item name="android:background">@drawable/rectangle_round_corners</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">24dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_def</item>
+    </style>
+
+    <style name="CurrencyStyle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/text_page_title</item>
+    </style>
+
+    <style name="NewOperationHintStyle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/text_hint_new_operation</item>
+    </style>
+
+    <style name="NewOperationSelectedStyle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_new_operation</item>
+    </style>
+
+    <!-- Layout -->
+
+    <style name="FilterButtonLayoutStyle">
+        <item name="android:background">@drawable/filter_button_ripple</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingVertical">@dimen/filter_button_padding_vertical</item>
+        <item name="android:paddingHorizontal">@dimen/filter_button_padding_horizontal</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="CloseIconLayoutStyle">
+        <item name="android:padding">@dimen/close_ic_padding</item>
+    </style>
+
+    <style name="RippleLayoutStyle">
+        <item name="android:background">@drawable/layout_bg</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="BackIconLayoutStyle">
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <!-- ImageView -->
+
+    <style name="BackIconStyle">
+        <item name="android:padding">@dimen/back_ic_padding</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <!-- FAB -->
+
+    <style name="AddOperationFabStyle">
+        <item name="android:backgroundTint">@color/main</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:outlineSpotShadowColor">@android:color/transparent</item>
+    </style>
+
+    <!-- EditText -->
+
+    <style name="AmountEditTextStyle">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_page_title</item>
+        <item name="android:inputType">number</item>
+        <item name="android:background">@null</item>
+        <item name="android:maxEms">5</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:paddingHorizontal">6dp</item>
+    </style>
+
+    <style name="CommentEditTextStyle">
+        <item name="android:background">@null</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textSize">@dimen/text_hint_new_operation</item>
+    </style>
+
+    <!-- Button -->
+
+    <style name="SaveOperationButtonStyle">
+        <item name="android:background">@drawable/save_operation_button_bg</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:layout_marginHorizontal">@dimen/to_parent_default</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="RepeatOperationButtonStyle">
+        <item name="android:background">@drawable/repeat_operation_button_bg</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/main</item>
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+</resources>

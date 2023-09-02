@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    tools:context=".presentation.view.fragment.OperationsFragment">
+
+    <TextView
+        android:id="@+id/balanceTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/to_parent_default"
+        android:text="@string/balance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/BalanceTitleStyle" />
+
+    <TextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/balance_default"
+        app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView"
+        style="@style/BlackBoldTitleStyle"/>
+
+    <TextView
+        android:id="@+id/balanceCurrencyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="3dp"
+        android:text="₽"
+        app:layout_constraintStart_toEndOf="@+id/balanceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView"
+        style="@style/BlackBoldTitleStyle"/>
+
+    <ImageView
+        android:id="@+id/searchImageView"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="@dimen/to_parent_default"
+        android:src="@drawable/search_ic"
+        app:layout_constraintEnd_toStartOf="@+id/moreImageView"
+        app:layout_constraintTop_toTopOf="@+id/balanceTitleTextView" />
+
+    <ImageView
+        android:id="@+id/moreImageView"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginEnd="@dimen/to_parent_default"
+        android:src="@drawable/more_ic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchImageView" />
+
+    <TextView
+        android:id="@+id/lastOperationsTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/last_operation"
+        app:layout_constraintStart_toStartOf="@+id/balanceTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/balanceTextView"
+        style="@style/BlackBoldPageTitleStyle"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/filtersContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph_operations"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/lastOperationsTitleTextView"
+        app:layout_constraintStart_toStartOf="parent">
+    </androidx.fragment.app.FragmentContainerView>
+
+    <TextView
+        android:id="@+id/emptyOperationListTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_operation_list_title"
+        app:layout_constraintBottom_toTopOf="@+id/addOperationFab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filtersContainer"
+        app:layout_constraintVertical_bias="0.515"
+        style="@style/EmptyOperationListViewStyle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addOperationFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/to_parent_default"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/add_ic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
+        style="@style/AddOperationFabStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

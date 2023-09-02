@@ -1,3 +1,62 @@
 <resources>
     <string name="app_name">incomee</string>
+
+    <!-- Bottom navigation menu -->
+
+    <string name="analytics">Аналитика</string>
+    <string name="operations">Операции</string>
+    <string name="accounts">Счета</string>
+    <string name="budget">Бюджет</string>
+    <string name="empty_operation_list_title">В истории операций пока пусто.\n Создайте первую операцию, и она \nпоявится здесь.</string>
+
+    <!-- Operations Fragment -->
+
+    <string name="balance">Баланс</string>
+    <string name="last_operation">Последние операции</string>
+    <string name="balance_default">0</string>
+    <string name="income">Доход</string>
+    <string name="expense">Расход</string>
+    <string name="transfer">Перевод</string>
+    <string name="account">Счет</string>
+    <string name="operation_type_title">Тип операции</string>
+
+    <!-- New operation activity -->
+
+    <!-- New Expense Fragment -->
+
+    <string name="category">Категория</string>
+    <string name="date">Дата</string>
+    <string name="comment">Комментарий</string>
+    <string name="save">Сохранить</string>
+    <string name="repeat_operation">Повторять операцию</string>
+    <string name="period">Период</string>
+    <string name="amount_hint">0</string>
+
+    <!-- Bottom sheet Dialog -->
+
+    <string name="incomes">Доходы</string>
+    <string name="expenses">Расходы</string>
+    <string name="transfers">Переводы</string>
+
+    <!-- Categories activity -->
+
+    <string name="categories">Категории</string>
+    <string name="category_products">Продукты</string>
+    <string name="category_car">Машина</string>
+    <string name="category_clothes">Одежда</string>
+    <string name="category_internet">Интернет</string>
+    <string name="category_cafe">Кафе</string>
+    <string name="category_education">Образование</string>
+    <string name="category_entertainment">Развлечения</string>
+    <string name="category_gifts">Подарки</string>
+    <string name="category_tech">Техника</string>
+    <string name="category_medicine">Аптека</string>
+    <string name="category_home">Дом</string>
+    <string name="category_children">Дети</string>
+    <string name="category_pets">Питомцы</string>
+    <string name="category_sport">Спорт</string>
+    <string name="category_transport">Транспорт</string>
+    <string name="category_travel">Путешествия</string>
+    <string name="category_empty">Без категории</string>
+
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/to_parent_default"
+    android:layout_marginVertical="@dimen/new_operation_divider_margin_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/categoryIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginEnd="@dimen/new_operation_icon_to_text"
+        android:src="@drawable/category_products_ic" />
+
+    <TextView
+        android:id="@+id/categoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="Продукты"
+        style="@style/NewOperationSelectedStyle"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/incomeCheckIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginEnd="@dimen/to_parent_default"
+        android:src="@drawable/check_ic_blue"
+        android:visibility="invisible" />
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true"
+        android:drawable="@drawable/close_ic_white_padding"/>
+    <item android:state_activated="false"
+        android:drawable="@drawable/chevron_down_ic_black_padding"/>
+</selector>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    tools:context=".presentation.view.activity.NewOperationActivity">
+
+    <LinearLayout
+        android:id="@+id/backIconLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/BackIconLayoutStyle">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_ic"
+            style="@style/BackIconStyle" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/operationTypeLayoutScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/filters_to_back_ic"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/backIconLayout">
+
+        <LinearLayout
+            android:id="@+id/operationTypeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/incomeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filter_button_height"
+                style="@style/FilterButtonLayoutStyle">
+
+                <TextView
+                    android:id="@+id/incomeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/income"
+                    style="@style/FilterButtonTextStyle"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expenseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filter_button_height"
+                android:layout_marginStart="@dimen/filter_margin"
+                style="@style/FilterButtonLayoutStyle">
+
+                <TextView
+                    android:id="@+id/expenseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expense"
+                    style="@style/FilterButtonTextStyle"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transferButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/filter_button_height"
+                android:layout_marginStart="@dimen/filter_margin"
+                style="@style/FilterButtonLayoutStyle">
+
+                <TextView
+                    android:id="@+id/transferTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transfer"
+                    style="@style/FilterButtonTextStyle"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph_new_operation"
+        tools:layout="@layout/fragment_new_expense"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/operationTypeLayoutScrollView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
